@@ -13,7 +13,6 @@ require (
 	cloud.google.com/go v0.65.0
 	github.com/Azure/go-autorest/autorest v0.11.18
 	github.com/Azure/go-autorest/autorest/azure/auth v0.4.2
-	github.com/BurntSushi/toml v0.4.1 // indirect
 	github.com/GoogleCloudPlatform/docker-credential-gcr v2.0.5+incompatible
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/VerbalExpressions/GoVerbalExpressions v0.0.0-20200410162751-4d76a1099a6e
@@ -39,7 +38,7 @@ require (
 	github.com/hashicorp/hcl/v2 v2.10.1
 	github.com/hashicorp/terraform v0.15.3
 	github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
-	github.com/iancoleman/strcase v0.1.3
+	github.com/iancoleman/strcase v0.2.0
 	github.com/itchyny/gojq v0.12.1
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
 	github.com/mattn/go-isatty v0.0.12
@@ -56,6 +55,15 @@ require (
 	github.com/stretchr/testify v1.7.0
 	github.com/zclconf/go-cty v1.9.1
 	go.uber.org/zap v1.16.0
+dependabot/go_modules/github.com/iancoleman/strcase-0.2.0
+dependabot/go_modules/github.com/iancoleman/strcase-0.2.0
+	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
+	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef
+=======
+	golang.org/x/sys v0.0.0-20211205182925-97ca703d548d
+	golang.org/x/tools v0.1.8 // indirect
+dependabot/docker/build/alpine-3.15.0
+=======
 dependabot/go_modules/github.com/zclconf/go-cty-1.9.1
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
 	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef
@@ -72,6 +80,7 @@ f/go-sum
 =======
 	golang.org/x/sys v0.0.0-20211205182925-97ca703d548d
 	golang.org/x/tools v0.1.8 // indirect
+dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
