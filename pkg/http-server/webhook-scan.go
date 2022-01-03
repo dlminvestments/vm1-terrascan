@@ -34,8 +34,13 @@ func (g *APIHandler) validateK8SWebhook(w http.ResponseWriter, r *http.Request) 
 	zap.S().Debug("handle: validating webhook request")
 
 	var (
-		params = mux.Vars(r)
-		apiKey = params["apiKey"]
+		params                   = mux.Vars(r)
+		apiKey                   = params["apiKey"]
+		qP                       = r.URL.Query()
+		notificationWebhookURL   = qP.Get("webhook-url")
+		notificationWebhookToken = qP.Get("webhook-token")
+		repoURL                  = qP.Get("repo-url")
+		repoRef                  = qP.Get("repo-ref")
 	)
 
 	// Read the request into byte array
@@ -47,7 +52,7 @@ func (g *APIHandler) validateK8SWebhook(w http.ResponseWriter, r *http.Request) 
 	}
 	zap.S().Debugf("scanning configuration webhook request: %+v", string(body))
 
-	validatingWebhook := admissionWebhook.NewValidatingWebhook(body)
+	validatingWebhook := admissionWebhook.NewValidatingWebhook(body, notificationWebhookURL, notificationWebhookToken, repoURL, repoRef)
 	// Validate if authorized (API key is specified and matched the server one (saved in an environment variable)
 	if err := validatingWebhook.Authorize(apiKey); err != nil {
 		switch err {
