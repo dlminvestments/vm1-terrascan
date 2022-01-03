@@ -56,6 +56,10 @@ require (
 	github.com/stretchr/testify v1.7.0
 	github.com/zclconf/go-cty v1.9.1
 	go.uber.org/zap v1.16.0
+dependabot/go_modules/github.com/zclconf/go-cty-1.9.1
+	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
+	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef
+=======
 dependabot/go_modules/github.com/go-errors/errors-1.4.1
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
 	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef
@@ -68,6 +72,7 @@ f/go-sum
 =======
 	golang.org/x/sys v0.0.0-20211205182925-97ca703d548d
 	golang.org/x/tools v0.1.8 // indirect
+dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
 	google.golang.org/api v0.34.0
