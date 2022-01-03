@@ -10,12 +10,15 @@ replace (
 )
 
 require (
+dependabot/go_modules/github.com/spf13/cobra-1.2.1
+	cloud.google.com/go v0.81.0
+=======
 	cloud.google.com/go v0.65.0
-	github.com/Azure/azure-sdk-for-go v56.2.0+incompatible
+dependabot/docker/build/alpine-3.15.0
 	github.com/Azure/go-autorest/autorest v0.11.18
 	github.com/Azure/go-autorest/autorest/azure/auth v0.4.2
-	github.com/BurntSushi/toml v0.4.1 // indirect
 	github.com/GoogleCloudPlatform/docker-credential-gcr v2.0.5+incompatible
+	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/VerbalExpressions/GoVerbalExpressions v0.0.0-20200410162751-4d76a1099a6e
 	github.com/aws/aws-sdk-go v1.37.0
 	github.com/aws/aws-sdk-go-v2/config v1.5.0
@@ -23,8 +26,9 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.11.1
 	github.com/aws/smithy-go v1.6.0
 	github.com/awslabs/goformation/v4 v4.19.1
+	github.com/docker/cli v20.10.5+incompatible // indirect
 	github.com/ghodss/yaml v1.0.0
-	github.com/go-errors/errors v1.0.1
+	github.com/go-errors/errors v1.4.1
 	github.com/google/go-containerregistry v0.1.2
 	github.com/google/uuid v1.2.0
 	github.com/gorilla/handlers v1.5.1
@@ -38,8 +42,9 @@ require (
 	github.com/hashicorp/hcl/v2 v2.10.1
 	github.com/hashicorp/terraform v0.15.3
 	github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
-	github.com/iancoleman/strcase v0.1.3
+	github.com/iancoleman/strcase v0.2.0
 	github.com/itchyny/gojq v0.12.1
+	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
 	github.com/mattn/go-isatty v0.0.12
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/moby/buildkit v0.8.3
@@ -50,18 +55,58 @@ require (
 	github.com/pelletier/go-toml v1.9.3
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/afero v1.6.0
-	github.com/spf13/cobra v1.1.3
+	github.com/spf13/cobra v1.2.1
 	github.com/stretchr/testify v1.7.0
+dependabot/go_modules/github.com/spf13/cobra-1.2.1
+	github.com/zclconf/go-cty v1.8.3
+	go.uber.org/zap v1.17.0
+	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
+	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef
+	google.golang.org/api v0.44.0
+	google.golang.org/genproto v0.0.0-20210602131652-f16073e35f0c
+	gopkg.in/src-d/go-git.v4 v4.13.1
+	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+	helm.sh/helm/v3 v3.6.1
+=======
 	github.com/zclconf/go-cty v1.9.1
 	go.uber.org/zap v1.16.0
+dependabot/go_modules/github.com/iancoleman/strcase-0.2.0
+dependabot/go_modules/github.com/iancoleman/strcase-0.2.0
+	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
+	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef
+=======
 	golang.org/x/sys v0.0.0-20211205182925-97ca703d548d
 	golang.org/x/tools v0.1.8 // indirect
+dependabot/docker/build/alpine-3.15.0
+=======
+dependabot/go_modules/github.com/zclconf/go-cty-1.9.1
+	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
+	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef
+=======
+dependabot/go_modules/github.com/go-errors/errors-1.4.1
+	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
+	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef
+=======
+f/go-sum
+	golang.org/x/mod v0.5.1 // indirect
+	golang.org/x/oauth2 v0.0.0-20200902213428-5d25da1a8d43 // indirect
+	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef
+	golang.org/x/tools v0.1.7 // indirect
+=======
+	golang.org/x/sys v0.0.0-20211205182925-97ca703d548d
+	golang.org/x/tools v0.1.8 // indirect
+dependabot/docker/build/alpine-3.15.0
+dependabot/docker/build/alpine-3.15.0
+dependabot/docker/build/alpine-3.15.0
+dependabot/docker/build/alpine-3.15.0
 	google.golang.org/api v0.34.0
 	google.golang.org/genproto v0.0.0-20201110150050-8816d57aaa9a
+	google.golang.org/grpc v1.31.1 // indirect
 	gopkg.in/src-d/go-git.v4 v4.13.1
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
 	helm.sh/helm/v3 v3.6.1
 	honnef.co/go/tools v0.2.2 // indirect
+dependabot/docker/build/alpine-3.15.0
 	k8s.io/api v0.21.0
 	k8s.io/apimachinery v0.21.0
 	k8s.io/client-go v10.0.0+incompatible
