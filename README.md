@@ -4,6 +4,7 @@
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202-blue)](https://github.com/accurics/terrascan/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/accurics/terrascan/pulls)
 ![CI](https://github.com/accurics/terrascan/workflows/build/badge.svg)
+[![AUR package](https://repology.org/badge/version-for-repo/aur/terrascan.svg)](https://repology.org/project/terrascan/versions)
 [![codecov](https://codecov.io/gh/accurics/terrascan/branch/master/graph/badge.svg)](https://codecov.io/gh/accurics/terrascan)
 [![community](https://img.shields.io/discourse/status?server=https%3A%2F%2Fcommunity.accurics.com)](https://community.accurics.com)
 [![Documentation Status](https://readthedocs.com/projects/accurics-terrascan/badge/?version=latest)](https://docs.accurics.com/projects/accurics-terrascan/en/latest/?badge=latest)
@@ -26,10 +27,11 @@ Terrascan is a static code analyzer for Infrastructure as Code. Terrascan allows
 
 ## Key features
 * 500+ Policies for security best practices
-* Scanning of Terraform (HCL2)
-* Scanning of Kubernetes (JSON/YAML), Helm v3, and Kustomize v3
-* Scanning of Dockerfiles
-* Support for AWS, Azure, GCP, Kubernetes, Dockerfiles, and GitHub
+* Scanning of [Terraform](https://runterrascan.io/docs/usage/command_line_mode/#scanning-current-directory-containing-terraform-files-for-aws-resources) (HCL2)
+* Scanning of [Kubernetes](https://runterrascan.io/docs/usage/command_line_mode/#scanning-for-a-specific-iac-provider) (JSON/YAML), [Helm](https://runterrascan.io/docs/usage/command_line_mode/#scanning-a-helm-chart) v3, and [Kustomize](https://runterrascan.io/docs/usage/command_line_mode/#scanning-a-kustomize-chart)
+* Scanning of [Dockerfiles](https://runterrascan.io/docs/usage/command_line_mode/#scanning-a-dockerfile)
+* Support for [AWS](https://runterrascan.io/docs/policies/aws/), [Azure](https://runterrascan.io/docs/policies/azure/), [GCP](https://runterrascan.io/docs/policies/gcp/), [Kubernetes](https://runterrascan.io/docs/policies/k8s/), [Dockerfile](https://runterrascan.io/docs/policies/docker/), and [GitHub](https://runterrascan.io/docs/policies/github/)
+* Integrates with docker image vulnerability scanning for AWS, Azure, GCP, Harbor container registries.
 
 ## Quick Start
 
@@ -48,6 +50,14 @@ $ curl -L "$(curl -s https://api.github.com/repos/accurics/terrascan/releases/la
 $ tar -xf terrascan.tar.gz terrascan && rm terrascan.tar.gz
 $ install terrascan /usr/local/bin && rm terrascan
 $ terrascan
+```
+
+#### Install on ArchLinux / Manjaro via `AUR`
+
+ArchLinux and Manjaro users can install by:
+
+```
+yay -S terrascan
 ```
 
 #### Install via `brew`
@@ -73,8 +83,16 @@ To scan your code for security issues you can run the following (defaults to sca
 ```sh
 $ terrascan scan
 ```
-**Note**: Terrascan will exit with an error code 3 if any issues are found during a scan.
+**Note**: Terrascan will exit with an error code if any errors or violations are found during a scan.
 
+#### List of possible Exit Codes
+| Scenario      | Exit Code |
+| ----------- | ----------- |
+| scan summary has errors and violations | 5 |
+| scan summary has errors but no violations | 4 |
+| scan summary has violations but no errors | 3 |
+| scan summary has no violations or errors | 0 |
+| scan command errors out due to invalid inputs | 1 |
 ### Step 3: Integrate with CI\CD
 
 Terrascan can be integrated into CI/CD pipelines to enforce security best practices.
@@ -112,6 +130,17 @@ Terrascan policies are written using the [Rego policy language](https://www.open
 By default, Terrascan downloads policies from Terrascan repositories while scanning for the first time. However, if you want to download the latest policies, you need to run the Initialization process. See [Usage](https://runterrascan.io/docs/usage/command_line_mode/) for information about the Initialization process.
 
 Note: The scan command will implicitly run the initialization process if there are no policies found.
+
+## Docker Image Vulnerabilities
+You can use the `--find-vuln` flag to collect vulnerabilities as reported in its registry as part of Terrascan's output. Currently Terrascan supports Elastic Container Registry (ECR), Azure Container Registry, Google Container Registry, and Google Artifact Registry.
+
+The `--find-vuln` flag can be used when scanning IaC files as follows:
+
+```
+$ terrascan scan -i <IaC provider> --find-vuln
+```
+
+For more information and explanation of how to setup your environment to authenticate with the registrie's APIs see the [usage](https://runterrascan.io/docs/usage/command_line_mode/) documentation.
 
 ## Customizing scans
 

@@ -36,6 +36,42 @@ var (
 			Summary: summaryWithNoViolations,
 		},
 	}
+	vulnerabilitiesInputHumanReadable = policy.EngineOutput{
+		ViolationStore: &results.ViolationStore{
+			Vulnerabilities: []*results.Vulnerability{
+				{
+					Image:           "test",
+					Container:       "test",
+					VulnerabilityID: "CVE-2019-18276",
+					PrimaryURL:      "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18276",
+					Description:     "GNU Bash. Bash is the GNU Project's shell",
+					Severity:        "HIGH",
+				},
+			},
+			Summary: results.ScanSummary{
+				ResourcePath:     "test",
+				IacType:          "terraform",
+				Timestamp:        "2020-12-12 11:21:29.902796 +0000 UTC",
+				TotalPolicies:    566,
+				LowCount:         0,
+				MediumCount:      0,
+				HighCount:        1,
+				ViolatedPolicies: 1,
+				Vulnerabilities:  &summaryWithNoViolations.ViolatedPolicies,
+			},
+		},
+	}
+	summaryWithRepoURLRepoRef = results.ScanSummary{
+		ResourcePath:     "https://github.com/user/repository.git",
+		Branch:           "main",
+		IacType:          "terraform",
+		Timestamp:        "2020-12-12 11:21:29.902796 +0000 UTC",
+		TotalPolicies:    566,
+		LowCount:         0,
+		MediumCount:      0,
+		HighCount:        1,
+		ViolatedPolicies: 1,
+	}
 )
 
 const (
@@ -113,6 +149,45 @@ Scan Summary -
 	Low                 :	0
 	Medium              :	0
 	High                :	1`
+
+	vulnerabilityScanOutputHumanReadable = `Vulnerabilities Details - 
+    
+	Description         :	GNU Bash. Bash is the GNU Project's shell
+	Vulnerability ID    :	CVE-2019-18276
+	Resource Name       :	""
+	Resource Type       :	
+	Image               :	test
+	Package             :	
+	Line                :	0
+	Primary URL         :	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18276
+	Primary URL         :	HIGH
+	
+	-----------------------------------------------------------------------
+	
+
+Scan Summary -
+
+	File/Folder         :	test
+	IaC Type            :	terraform
+	Scanned At          :	2020-12-12 11:21:29.902796 +0000 UTC
+	Policies Validated  :	566
+	Violated Policies   :	1
+	Low                 :	0
+	Medium              :	0
+	High                :	1
+	Vulnerabilities     :	1`
+
+	expectedOutput4 = `Scan Summary -
+
+	File/Folder         :	https://github.com/user/repository.git
+	Branch              :	main
+	IaC Type            :	terraform
+	Scanned At          :	2020-12-12 11:21:29.902796 +0000 UTC
+	Policies Validated  :	566
+	Violated Policies   :	1
+	Low                 :	0
+	Medium              :	0
+	High                :	1`
 )
 
 func TestHumanReadbleWriter(t *testing.T) {
@@ -142,6 +217,20 @@ func TestHumanReadbleWriter(t *testing.T) {
 			name:           "Human Readable Writer: With PassedRules",
 			input:          outputWithPassedRules,
 			expectedOutput: expectedOutput3,
+		},
+		{
+			name:           "Human Readable Writer: With Vulnerabilities",
+			input:          vulnerabilitiesInputHumanReadable,
+			expectedOutput: vulnerabilityScanOutputHumanReadable,
+		},
+		{
+			name: "Human Readable Writer: with repository url and branch",
+			input: policy.EngineOutput{
+				ViolationStore: &results.ViolationStore{
+					Summary: summaryWithRepoURLRepoRef,
+				},
+			},
+			expectedOutput: expectedOutput4,
 		},
 	}
 

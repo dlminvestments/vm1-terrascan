@@ -63,11 +63,12 @@ $ terrascan scan
 ```
 
 The `scan` command supports flags to configure the following:
-- Specify a directory to be scanned.
-- Specify a particular IaC file to be scanned.
+- Specify a directory to be scanned
+- Specify a particular IaC file to be scanned
 - Configure IaC provider type
 - Directory path to policies
-- Specify policy type.
+- Specify policy type
+- Retrieve vulnerability scanning results from docker images referenced in IaC
 
 The full list of flags for the scan command can be found by typing
 `terrascan scan -h`
@@ -101,7 +102,16 @@ When scanning Terraform code, Terrascan checks for the availability of the file 
 
 By default, Terrascan output is displayed in a human friendly format. Use the `-o` flag to change this to **YAML**, **JSON**, **XML**, **JUNIT-XML** and **SARIF** formats.
 
-> **Note**: Terrascan exits with error code 3 if any issues are found during a scan.
+> **Note**: Terrascan will exit with an error code if any errors or violations are found during a scan.
+
+> #### List of possible Exit Codes
+> | Scenario      | Exit Code |
+> | ----------- | ----------- |
+> | scan summary has errors and violations | 5 |
+> | scan summary has errors but no violations | 4 |
+> | scan summary has violations but no errors | 3 |
+> | scan summary has no violations or errors | 0 |
+> | scan command errors out due to invalid inputs | 1 |
 
 
 Terrascan's output is a list of security violations present in the scanned IaC files. The example below is terrascan's output in YAML.
@@ -148,7 +158,22 @@ $ terrascan scan -i kustomize
 
 This command looks for a `kustomization.yaml` file in the current directory and scans rendered .yaml or .yml template files.
 
+Terrascan considers Kustomize v4 as the default version. Other supported versions (v2 and v3) of Kustomize could be scanned by specifying --iac-version flag as follows:
+
+```
+$ terrascan scan -i kustomize --iac-version v2
+```
+
+Scanning v2 and v3 requires the corresponding Kustomize binary and the path to the binary must be specified in the `KUSTOMIZE_<VERSION>` ENV variable.
+
+e.g: For --iac-version v2, we need to have:
+
+    KUSTOMIZE_V2=path/to/kustomize/v2/binary
+
+To install Kustomize one can use [this script](https://github.com/accurics/terrascan/tree/master/scripts/install_kustomize.sh)
+
 A specific directory to scan can be specified using the `-d` flag. The Kustomize IaC provider does not support scanning of individual files using the `-f` flag.
+
 ### Scanning a Dockerfile
 
 A Dockerfile can be scanned by specifying "docker" on the -i flag as follows:
@@ -160,6 +185,52 @@ $ terrascan scan -i docker
 This command looks for a `Dockerfile` in the current directory and scans that file.
 
 A specific directory to scan can be specified using the `-d` flag. With the `-d` flag, it will check for all the docker files (named as `Dockerfile`) in the provided directory recursively. A specific dockerfile can be scanned using `-f` flag by providing a path to the file.
+
+### Retrieve Docker Image Vulnerabilities
+
+Terrascan can display vulnerabilities for Docker images present in the IaC files being scanned by specifying the `--find-vuln` flag along with the scan command as follows:
+
+```
+$ terrascan scan -i <IaC Provider> --find-vuln
+```
+
+This command looks for all the Docker images present in the IaC files being scanned and retrieves any vulnerabilities as reported by it's container registry. Supported container registries include: AWS Elastic Container Registry (ECR), Azure Container Registry, Google Container Registry, Google Artifact Registry and Harbor Container Registry.
+
+The following environment variables are required when connecting to the container registries:
+
+#### AWS Elastic Container Registry (ECR)
+
+ECR requires your environment to be configured similar to the requirements of AWS's SDK. For example, the `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION` environment variables can be set when connecting to AWS using API keys for an AWS user. More information [here](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html).
+
+#### Google Container Registry and Artifact Registry
+
+Terrascan requires a service account with access to the Container Analysis and Container Registry permissions. The `GOOGLE_APPLICATION_CREDENTIALS` environment variable can be set to the path of the service account's key when scanning. More information about GCP authentication available [here](https://cloud.google.com/docs/authentication/getting-started).
+
+#### Azure Container Registry
+
+When integrating vulnerability results from Azure, Terrascan requires the `AZURE_AUTH_LOCATION`, and `AZURE_ACR_PASSWORD` environment variables.
+
+The `AZURE_AUTH_LOCATION` should contain the path to your azure authentication json. You can generate this as follows:
+
+ ``` Bash
+ az ad sp create-for-rbac --sdk-auth > azure.auth
+ ```
+
+After generating the file, set the `azure.auth` file path as the `AZURE_AUTH_LOCATION` environment variable. More information about using file based authentication for the Azure SDK available [here](https://docs.microsoft.com/en-us/azure/developer/go/azure-sdk-authorization#use-file-based-authentication).
+
+Terrascan also requires the password to the registry set into the `AZURE_ACR_PASSWORD` environment variable. This can be fetched using the az cli as follows:
+
+``` Bash
+az acr credential show --name RegistryName
+```
+#### Harbor Container Registry
+
+When integrating vulnerability results from Harbor, Terrascan requires the `HARBOR_REGISTRY_USERNAME`, `HARBOR_REGISTRY_PASSWORD`,`HARBOR_REGISTRY_CACERT`, `HARBOR_SKIP_TLS`, and `HARBOR_REGISTRY_DOMAIN` environment variables.
+
+Terrascan requires `HARBOR_REGISTRY_DOMAIN` environment variable to identify domain of harobor registry.
+
+In case using terrascan for development or testing purpose then to skip tls verification set `HARBOR_SKIP_TLS` environment variable to `true`.
+
 
 ### Resource Config
 While scanning a IaC, Terrascan loads all the IaC files, creates a list of resource configs and then processes this list to report violations. For debugging purposes, you can print this resource configs list as an output by using the `--config-only` flag to the `terrascan scan` command.
@@ -197,16 +268,21 @@ aws_ecr_repository:
 | -d | Use this to scan a specific directory. Use "." for current directory | AWS, GCP, Azure, and GitHub|
 | -f | Use this command to scan a specific file | <tbd any formats/limitations for example file size> |
 | -i type  | Use this to change the IaC provider | arm, cft, docker, helm, k8s, kustomize, **terraform**|
-| -i version  | Use this in conjunction with `- i type` to specify the version of IaC provider | Supported versions of each IaC are: `arm: v1, cft: v1, docker: v1, helm: v3, k8s: v1, kustomize: v3, terraform: v12, v13, v14, v15`|
+| --iac-version version | Use this in conjunction with `- i type` to specify the version of IaC provider | Supported versions of each IaC are: `arm: v1, cft: v1, docker: v1, helm: v3, k8s: v1, kustomize: v2, v3, v4, terraform: v12, v13, v14, v15`|
 | -p | Use this to specify directory path for policies | By default policies are installed here: <tbd specify a default path> |
 | -t  | Use this to specify individual cloud providers | **all**, aws, azure, gcp, github, k8s|
 | -r | Use this to specify directory path for remote backend | git, s3, gcs, http |
 | -u | Use this to specify directory URL for remote IaC repositories | see options below |
 | |scan-rules|Specify rules to scan, example: --scan-rules="ruleID1,ruleID2"|
 | |skip-rules|Specify one or more rules to skip while scanning. Example: --skip-rules="ruleID1,ruleID2"|
-| |use-colours |Configure the color for output (**auto**, t, f) |
+| |use-colors |Configure the color for output (**auto**, t, f) |
 |--non-recursive |Use this for non recursive directories and modules scan | By default directory is scanned recursively, if this flag is used then only provided root directory will be scanned|
+|--webhook-token string| Token used for sending authenticated requests to the notification webhook | This flag is optional when using the notification webhook|
+|--webhook-url | A webhook URL where Terrascan will send JSON scan report and normalized IaC JSON | This overrides any notification webhook URLs configured in config TOML file specified with the `-c` flag|
 |--use-terraform-cache |Use this to refer terraform remote modules from terraform init cache rather than downloading | By default remote module will be downloaded in temporary directory. If this flag is set then modules will be refered from terraform init cache if module is not present in terraform init cache it will be downloaded. Directory will be scanned non recurively if this flag is used.(applicable only with terraform IaC provider)|
+| --find-vuln | find vulnerabilities | Use this to fetch vulnerabilities identified on the registry for docker images present in IaC the files scanned |
+| --repo-url | repository url | This flag can be used to include the repository URL as part of scan results and notifications |
+| --repo-ref | repository branch name | This flag can be used to include the repository branch name as part of scan results and notifications |
 | -v | verbose | Displays violations with all details |
 
 | Global flags | Description | Options |
@@ -231,25 +307,30 @@ Usage:
   terrascan scan [flags]
 
 Flags:
-     --categories strings        list of categories of violations to be reported by terrascan (example: --categories="category1,category2")
-      --config-only               will output resource config (should only be used for debugging purposes)
-  -h, --help                      help for scan
-  -d, --iac-dir string            path to a directory containing one or more IaC files (default ".")
-  -f, --iac-file string           path to a single IaC file
-  -i, --iac-type string           iac type (arm, cft, docker, helm, k8s, kustomize, terraform, tfplan)
-      --iac-version string        iac version (arm: v1, cft: v1, docker: v1, helm: v3, k8s: v1, kustomize: v3, terraform: v12, v13, v14, v15, tfplan: v1)
-      --non-recursive             do not scan directories and modules recursively
-  -p, --policy-path stringArray   policy path directory
-  -t, --policy-type strings       policy type (all, aws, azure, gcp, github, k8s) (default [all])
-  -r, --remote-type string        type of remote backend (git, s3, gcs, http, terraform-registry)
+      --categories strings                  list of categories of violations to be reported by terrascan (example: --categories="category1,category2")
+      --config-only                         will output resource config (should only be used for debugging purposes)
+      --find-vuln                           fetches vulnerabilities identified in Docker images
+  -h, --help                                help for scan
+  -d, --iac-dir string                      path to a directory containing one or more IaC files (default ".")
+  -f, --iac-file string                     path to a single IaC file
+  -i, --iac-type string                     iac type (arm, cft, docker, helm, k8s, kustomize, terraform, tfplan)
+      --iac-version string                  iac version (arm: v1, cft: v1, docker: v1, helm: v3, k8s: v1, kustomize: v2, v3, v4, terraform: v12, v13, v14, v15, tfplan: v1)
+      --non-recursive                       do not scan directories and modules recursively
+      --webhook-token string   the auth token to call the notification webhook URL
+      --webhook-url string     the URL where terrascan will send the scan report and normalized config json
+  -p, --policy-path stringArray             policy path directory
+  -t, --policy-type strings                 policy type (all, aws, azure, docker, gcp, github, k8s) (default [all])
+  -r, --remote-type string                  type of remote backend (git, s3, gcs, http, terraform-registry)
   -u, --remote-url string         url pointing to remote IaC repository
-      --scan-rules strings        one or more rules to scan (example: --scan-rules="ruleID1,ruleID2")
-      --severity string           minimum severity level of the policy violations to be reported by terrascan
-      --show-passed               display passed rules, along with violations
-      --skip-rules strings        one or more rules to skip while scanning (example: --skip-rules="ruleID1,ruleID2")
-      --use-colors string         color output (auto, t, f) (default "auto")
-      --use-terraform-cache       use terraform init cache for remote modules (when used directory scan will be non recursive,flag applicable only with terraform IaC provider)
-  -v, --verbose                   will show violations with details (applicable for default output)
+      --repo-ref string           branch of the repo being scanned
+      --repo-url string           URL of the repo being scanned, will be reflected in scan summary
+      --scan-rules strings                  one or more rules to scan (example: --scan-rules="ruleID1,ruleID2")
+      --severity string                     minimum severity level of the policy violations to be reported by terrascan
+      --show-passed                         display passed rules, along with violations
+      --skip-rules strings                  one or more rules to skip while scanning (example: --skip-rules="ruleID1,ruleID2")
+      --use-colors string                   color output (auto, t, f) (default "auto")
+      --use-terraform-cache                 use terraform init cache for remote modules (when used directory scan will be non recursive, flag applicable only with terraform IaC provider)
+  -v, --verbose                             will show violations with details (applicable for default output)
 
 Global Flags:
   -c, --config-path string   config file path

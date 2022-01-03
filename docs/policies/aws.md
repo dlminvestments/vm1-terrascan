@@ -480,11 +480,17 @@
 ### aws_lambda_function
 | Category | Resource | Severity | Description | Reference ID |
 | -------- | -------- | -------- | ----------- | ------------ |
+docs/skip
 | Logging and Monitoring | LambdaFunction | MEDIUM | Ensure AWS Lambda function has policy attached. | AWS.LambdaFunction.LM.MEIDUM.0063 |
 | Infrastructure Security | LambdaFunction | Low | Lambda function doesn't not include a VPC configuration. | AWS.LambdaFunction.Logging.0472 |
 | Logging and Monitoring | LambdaFunction | LOW | Lambda tracing is not enabled. | AWS.LambdaFunction.Logging.0470 |
 | Data Protection | LambdaFunction | High | Lambda does not use KMS CMK key to protect environment variables. | AWS.LambdaFunction.EncryptionandKeyManagement.0471 |
 | Logging and Monitoring | LambdaFunction | LOW | Lambda tracing is not enabled. | AWS.LambdaFunction.Logging.0470 |
+=======
+| Logging | LambdaFunction | Low | Lambda function does not include a VPC configuration. | AWS.LambdaFunction.Logging.0472 |
+| Logging | LambdaFunction | LOW | Lambda tracing is not enabled. | AWS.LambdaFunction.Logging.0470 |
+| Encryption and Key Management | LambdaFunction | High | Lambda does not use KMS CMK key to protect environment variables. | AWS.LambdaFunction.EncryptionandKeyManagement.0471 |
+dependabot/docker/build/alpine-3.15.0
 
 
 ### aws_kms_key

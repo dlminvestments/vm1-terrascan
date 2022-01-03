@@ -99,6 +99,21 @@ type ScanOptions struct {
 
 	// useTerraformCache provides ability to use terraform init local cache for modules rather than downloading them.
 	useTerraformCache bool
+
+	// FindVulnerabilities gives option to scan container images for vulnerabilities
+	findVulnerabilities bool
+
+	// notificationWebhookURL is the URL where terrascan will send the scan report and normalized config json
+	notificationWebhookURL string
+
+	// notificationWebhookToken is the auth token to call the notification webhook URL
+	notificationWebhookToken string
+
+	// repoURL lets us specify URL of the repository being scanned
+	repoURL string
+
+	// repoRef lets us specify the branch of the repository being scanned
+	repoRef string
 }
 
 // NewScanOptions returns a new pointer to ScanOptions
@@ -183,8 +198,10 @@ func (s *ScanOptions) Run() error {
 	}
 
 	// create a new runtime executor for processing IaC
-	executor, err := runtime.NewExecutor(s.iacType, s.iacVersion, s.policyType,
-		s.iacFilePath, s.iacDirPath, s.policyPath, s.scanRules, s.skipRules, s.categories, s.severity, s.nonRecursive, s.useTerraformCache)
+	executor, err := runtime.NewExecutor(s.iacType, s.iacVersion, s.policyType, s.iacFilePath, s.iacDirPath,
+		s.policyPath, s.scanRules, s.skipRules, s.categories, s.severity, s.nonRecursive, s.useTerraformCache,
+		s.findVulnerabilities, s.notificationWebhookURL, s.notificationWebhookToken, s.repoURL, s.repoRef,
+	)
 	if err != nil {
 		return err
 	}
@@ -207,9 +224,12 @@ func (s *ScanOptions) Run() error {
 		return err
 	}
 
-	if !s.configOnly && results.Violations.ViolationStore.Summary.ViolatedPolicies != 0 && flag.Lookup("test.v") == nil {
+	if !s.configOnly && flag.Lookup("test.v") == nil {
 		os.RemoveAll(tempDir)
-		os.Exit(3)
+		exitCode := getExitCode(results)
+		if exitCode != 0 {
+			os.Exit(exitCode)
+		}
 	}
 	return nil
 }
@@ -246,4 +266,17 @@ func (s ScanOptions) writeResults(results runtime.Output) error {
 	}
 
 	return writer.Write(s.outputType, results.Violations, outputWriter)
+}
+
+// getExitCode returns appropriate exit code for terrascan based on scan output
+func getExitCode(o runtime.Output) int {
+	if len(o.Violations.ViolationStore.DirScanErrors) > 0 {
+		if o.Violations.ViolationStore.Summary.ViolatedPolicies > 0 {
+			return 5
+		}
+		return 4
+	} else if o.Violations.ViolationStore.Summary.ViolatedPolicies > 0 {
+		return 3
+	}
+	return 0
 }

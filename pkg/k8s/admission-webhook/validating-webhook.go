@@ -42,15 +42,23 @@ import (
 // the kubernetes API server and decides whether the admission request from
 // the kubernetes client should be allowed or not
 type ValidatingWebhook struct {
-	requestBody []byte
-	dblogger    *dblogs.WebhookScanLogger
+	requestBody              []byte
+	dblogger                 *dblogs.WebhookScanLogger
+	notificationWebhookURL   string
+	notificationWebhookToken string
+	repoURL                  string
+	repoRef                  string
 }
 
 // NewValidatingWebhook returns a new, empty ValidatingWebhook struct
-func NewValidatingWebhook(body []byte) AdmissionWebhook {
+func NewValidatingWebhook(body []byte, notificationWebhookURL, notificationWebhookToken, repoURL, repoRef string) AdmissionWebhook {
 	return ValidatingWebhook{
-		dblogger:    dblogs.NewWebhookScanLogger(),
-		requestBody: body,
+		dblogger:                 dblogs.NewWebhookScanLogger(),
+		requestBody:              body,
+		notificationWebhookURL:   notificationWebhookURL,
+		notificationWebhookToken: notificationWebhookToken,
+		repoURL:                  repoURL,
+		repoRef:                  repoRef,
 	}
 }
 
@@ -191,10 +199,10 @@ func (w ValidatingWebhook) scanK8sFile(filePath string) (runtime.Output, error) 
 
 	if flag.Lookup("test.v") != nil {
 		executor, err = runtime.NewExecutor("k8s", "v1", []string{"k8s"},
-			filePath, "", []string{testPoliciesPath}, []string{}, []string{}, []string{}, "", false, false)
+			filePath, "", []string{testPoliciesPath}, []string{}, []string{}, []string{}, "", false, false, false, w.notificationWebhookURL, w.notificationWebhookToken, w.repoURL, w.repoRef)
 	} else {
 		executor, err = runtime.NewExecutor("k8s", "v1", []string{"k8s"},
-			filePath, "", []string{}, []string{}, []string{}, []string{}, "", false, false)
+			filePath, "", []string{}, []string{}, []string{}, []string{}, "", false, false, false, w.notificationWebhookURL, w.notificationWebhookToken, w.repoURL, w.repoRef)
 	}
 	if err != nil {
 		zap.S().Errorf("failed to create runtime executer: '%v'", err)

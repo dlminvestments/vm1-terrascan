@@ -1,5 +1,115 @@
 # Changelog
 
+## [v1.12.0](https://github.com/accurics/terrascan/tree/v1.12.0) (2021-10-21)
+
+[Full Changelog](https://github.com/accurics/terrascan/compare/v1.11.0...v1.12.0)
+
+**Fixed bugs:**
+
+- A scan should NOT crash if the notification doesn't work as expected [\#1044](https://github.com/accurics/terrascan/issues/1044)
+- Rotation period for KMS keys not correctly interpreted \(GCP\) [\#699](https://github.com/accurics/terrascan/issues/699)
+
+**Closed issues:**
+
+- pre-commit hook reporting error with terrascan [\#1053](https://github.com/accurics/terrascan/issues/1053)
+- Terrascan: Not working in a Repository referencing other repository [\#1030](https://github.com/accurics/terrascan/issues/1030)
+- vulnerabilities found in accurics/terrascan\_atlantis image [\#1029](https://github.com/accurics/terrascan/issues/1029)
+
+**Merged pull requests:**
+
+- Update mkdocs-material to 7.3.4 [\#1060](https://github.com/accurics/terrascan/pull/1060) ([pyup-bot](https://github.com/pyup-bot))
+- Add support for repo-url and branch name in CLI flags and scan output [\#1059](https://github.com/accurics/terrascan/pull/1059) ([nasir-rabbani](https://github.com/nasir-rabbani))
+- Update mkdocs to 1.2.3 [\#1058](https://github.com/accurics/terrascan/pull/1058) ([pyup-bot](https://github.com/pyup-bot))
+- Update mkdocs-material to 7.3.3 [\#1057](https://github.com/accurics/terrascan/pull/1057) ([pyup-bot](https://github.com/pyup-bot))
+- Add support for getting line numbers for all attributes [\#1055](https://github.com/accurics/terrascan/pull/1055) ([kanchwala-yusuf](https://github.com/kanchwala-yusuf))
+- Update atlantis base image [\#1054](https://github.com/accurics/terrascan/pull/1054) ([cesar-rodriguez](https://github.com/cesar-rodriguez))
+- Fix notification webhook flow [\#1051](https://github.com/accurics/terrascan/pull/1051) ([nasir-rabbani](https://github.com/nasir-rabbani))
+- update container image version in helm and kustomize sources [\#1050](https://github.com/accurics/terrascan/pull/1050) ([dev-gaur](https://github.com/dev-gaur))
+- Accept notification webhook configs as CLI args [\#1042](https://github.com/accurics/terrascan/pull/1042) ([nasir-rabbani](https://github.com/nasir-rabbani))
+
+# Changelog
+
+## [v1.11.0](https://github.com/accurics/terrascan/tree/v1.11.0) (2021-10-07)
+
+[Full Changelog](https://github.com/accurics/terrascan/compare/v1.10.0...v1.11.0)
+
+**Implemented enhancements:**
+
+- How to ignore rules onto whole module included into HCL file [\#983](https://github.com/accurics/terrascan/issues/983)
+- Adds: support for harbor registry vulnerability  fetching [\#1015](https://github.com/accurics/terrascan/pull/1015) ([Rchanger](https://github.com/Rchanger))
+
+**Fixed bugs:**
+
+- panic: value is null [\#1019](https://github.com/accurics/terrascan/issues/1019)
+
+**Closed issues:**
+
+- helm chart breaking due to invalid configfile name extension [\#1046](https://github.com/accurics/terrascan/issues/1046)
+
+**Merged pull requests:**
+
+- Fix \#1046: helm chart breaking due to invalid configfile name extension [\#1047](https://github.com/accurics/terrascan/pull/1047) ([dev-gaur](https://github.com/dev-gaur))
+- fix permission issues in creating webhook mode logs file persistence [\#1045](https://github.com/accurics/terrascan/pull/1045) ([dev-gaur](https://github.com/dev-gaur))
+- Update mkdocs-material to 7.3.2 [\#1043](https://github.com/accurics/terrascan/pull/1043) ([pyup-bot](https://github.com/pyup-bot))
+- accepted 2xx in response code as success [\#1040](https://github.com/accurics/terrascan/pull/1040) ([nasir-rabbani](https://github.com/nasir-rabbani))
+- Optimized disk encryption check code on the azurerm\_managed\_disk resource [\#1037](https://github.com/accurics/terrascan/pull/1037) ([IrinaRaza](https://github.com/IrinaRaza))
+- Update docs for AWS.LambdaFunction.Logging.Low.0472 policy [\#1027](https://github.com/accurics/terrascan/pull/1027) ([brandysnaps](https://github.com/brandysnaps))
+- fix: added null check before value conversion to avoid panic [\#1020](https://github.com/accurics/terrascan/pull/1020) ([Rchanger](https://github.com/Rchanger))
+- Update mkdocs-material to 7.2.6 [\#1012](https://github.com/accurics/terrascan/pull/1012) ([pyup-bot](https://github.com/pyup-bot))
+- Update README.md [\#1011](https://github.com/accurics/terrascan/pull/1011) ([enmanuelmoreira](https://github.com/enmanuelmoreira))
+- Adds: e2e tests for vulnerability [\#1009](https://github.com/accurics/terrascan/pull/1009) ([Rchanger](https://github.com/Rchanger))
+- Adds additional dockerfile policies [\#984](https://github.com/accurics/terrascan/pull/984) ([rishidhamija](https://github.com/rishidhamija))
+
+# Changelog
+
+## [v1.10.0](https://github.com/accurics/terrascan/tree/v1.10.0) (2021-08-24)
+
+[Full Changelog](https://github.com/accurics/terrascan/compare/v1.9.0...v1.10.0)
+
+**Implemented enhancements:**
+
+- Add capability to extract references to container images in K8s ecosystem IaC [\#881](https://github.com/accurics/terrascan/issues/881)
+
+**Fixed bugs:**
+
+- Terrascan does not exit with error code in pipeline or CLI [\#950](https://github.com/accurics/terrascan/issues/950)
+
+**Closed issues:**
+
+- Links are Not formatted Properly in Contributor Doc [\#969](https://github.com/accurics/terrascan/issues/969)
+- Enabling dependabot or renovate for automatic dependency update [\#959](https://github.com/accurics/terrascan/issues/959)
+- AC\_K8S\_0131 triggers on a Namespace resource [\#957](https://github.com/accurics/terrascan/issues/957)
+- Integrity issue with Kustomize v4 support [\#956](https://github.com/accurics/terrascan/issues/956)
+- Add Support For ECR [\#927](https://github.com/accurics/terrascan/issues/927)
+- Add capability to extract references to container images in terraform [\#898](https://github.com/accurics/terrascan/issues/898)
+- Kustomize support says v3 but is actually v4 [\#891](https://github.com/accurics/terrascan/issues/891)
+
+**Merged pull requests:**
+
+- Extract images from Dockerfiles [\#1002](https://github.com/accurics/terrascan/pull/1002) ([nasir-rabbani](https://github.com/nasir-rabbani))
+- Revert "update resource type to map\[string\]bool" [\#1001](https://github.com/accurics/terrascan/pull/1001) ([cesar-rodriguez](https://github.com/cesar-rodriguez))
+- Upgrade helm.sh/helm/v3 to version 3.6.1 [\#1000](https://github.com/accurics/terrascan/pull/1000) ([patilpankaj212](https://github.com/patilpankaj212))
+- Bump github.com/pelletier/go-toml from 1.8.1 to 1.9.3 [\#999](https://github.com/accurics/terrascan/pull/999) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Adds additional policies for dockerfile [\#996](https://github.com/accurics/terrascan/pull/996) ([pavniii](https://github.com/pavniii))
+- terrascan should exit with non zero exit code when scan error are present [\#994](https://github.com/accurics/terrascan/pull/994) ([patilpankaj212](https://github.com/patilpankaj212))
+- Bump github.com/hashicorp/go-getter from 1.5.2 to 1.5.7 [\#993](https://github.com/accurics/terrascan/pull/993) ([dependabot[bot]](https://github.com/apps/dependabot))
+- update resource type to map\[string\]bool [\#992](https://github.com/accurics/terrascan/pull/992) ([patilpankaj212](https://github.com/patilpankaj212))
+- docs: fixes links in contributing documentation [\#990](https://github.com/accurics/terrascan/pull/990) ([cesar-rodriguez](https://github.com/cesar-rodriguez))
+- Initial support for image scanning [\#989](https://github.com/accurics/terrascan/pull/989) ([Rchanger](https://github.com/Rchanger))
+- added binary based support for kustomize v2 and v3 [\#988](https://github.com/accurics/terrascan/pull/988) ([nasir-rabbani](https://github.com/nasir-rabbani))
+- Docs: adds brew instructions to release checklist [\#987](https://github.com/accurics/terrascan/pull/987) ([cesar-rodriguez](https://github.com/cesar-rodriguez))
+- Update mkdocs-material to 7.2.4 [\#985](https://github.com/accurics/terrascan/pull/985) ([pyup-bot](https://github.com/pyup-bot))
+- modify wait logic for service account creation in e2e validating webhook test [\#979](https://github.com/accurics/terrascan/pull/979) ([patilpankaj212](https://github.com/patilpankaj212))
+- Update mkdocs-material to 7.2.3 [\#978](https://github.com/accurics/terrascan/pull/978) ([pyup-bot](https://github.com/pyup-bot))
+- Bump github.com/hashicorp/hcl/v2 from 2.10.0 to 2.10.1 [\#972](https://github.com/accurics/terrascan/pull/972) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump github.com/spf13/afero from 1.5.1 to 1.6.0 [\#970](https://github.com/accurics/terrascan/pull/970) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Adds: e2e test for docker IaC provider [\#968](https://github.com/accurics/terrascan/pull/968) ([Rchanger](https://github.com/Rchanger))
+- Fix dependency issue that caused dependabot to fail [\#966](https://github.com/accurics/terrascan/pull/966) ([patilpankaj212](https://github.com/patilpankaj212))
+- fix\(policies\): removing false-positive for K8s namespaces [\#961](https://github.com/accurics/terrascan/pull/961) ([danmx](https://github.com/danmx))
+- Extract Docker images from Terraform templates [\#937](https://github.com/accurics/terrascan/pull/937) ([dev-gaur](https://github.com/dev-gaur))
+- Fixes supported Kustomize version \(should be v4\) [\#932](https://github.com/accurics/terrascan/pull/932) ([dev-gaur](https://github.com/dev-gaur))
+- Extract Docker images from k8s YAML files [\#905](https://github.com/accurics/terrascan/pull/905) ([dev-gaur](https://github.com/dev-gaur))
+
 ## [v1.9.0](https://github.com/accurics/terrascan/tree/v1.9.0) (2021-08-06)
 
 [Full Changelog](https://github.com/accurics/terrascan/compare/v1.8.1...v1.9.0)
@@ -69,8 +179,6 @@
 - Add support for arm linked templates [\#903](https://github.com/accurics/terrascan/pull/903) ([sigmabaryon](https://github.com/sigmabaryon))
 - terraform 0.15 support [\#860](https://github.com/accurics/terrascan/pull/860) ([dev-gaur](https://github.com/dev-gaur))
 
-# Changelog
-
 ## [v1.8.0](https://github.com/accurics/terrascan/tree/v1.8.0) (2021-07-02)
 
 [Full Changelog](https://github.com/accurics/terrascan/compare/v1.7.0...v1.8.0)
@@ -130,8 +238,6 @@
 - fix broken link to `usage.md` [\#855](https://github.com/accurics/terrascan/pull/855) ([dan-hill2802](https://github.com/dan-hill2802))
 - Added "id" field support & policy validation tests [\#843](https://github.com/accurics/terrascan/pull/843) ([nasir-rabbani](https://github.com/nasir-rabbani))
 - Add Microsoft Azure ARM as an IaC Provider  [\#736](https://github.com/accurics/terrascan/pull/736) ([gauravgahlot](https://github.com/gauravgahlot))
-
-# Changelog
 
 ## [v1.7.0](https://github.com/accurics/terrascan/tree/v1.7.0) (2021-06-09)
 
@@ -237,8 +343,6 @@
 - Update mkdocs-redirects to 1.0.3 [\#710](https://github.com/accurics/terrascan/pull/710) ([pyup-bot](https://github.com/pyup-bot))
 - Initial addition of terrascan helm chart [\#688](https://github.com/accurics/terrascan/pull/688) ([jlk](https://github.com/jlk))
 
-# Changelog
-
 ## [v1.6.0](https://github.com/accurics/terrascan/tree/v1.6.0) (2021-05-10)
 
 [Full Changelog](https://github.com/accurics/terrascan/compare/v1.5.1...v1.6.0)
@@ -283,8 +387,6 @@
 - add terrascan atlantis container files, scripts and doc. [\#684](https://github.com/accurics/terrascan/pull/684) ([dev-gaur](https://github.com/dev-gaur))
 - adds support to scan directory with all iac providers in cli mode [\#674](https://github.com/accurics/terrascan/pull/674) ([patilpankaj212](https://github.com/patilpankaj212))
 - adds support to scan sub folders for terraform iac provider [\#640](https://github.com/accurics/terrascan/pull/640) ([patilpankaj212](https://github.com/patilpankaj212))
-
-# Changelog
 
 ## [v1.5.0](https://github.com/accurics/terrascan/tree/v1.5.0) (2021-04-23)
 
@@ -726,5 +828,11 @@ Major updates to Terrascan and the underlying architecture including:
 
 ## 0.1.0 (2017-11-26)
 - First release on PyPI.
+
+\* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*
+
+
+\* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*
+
 
 \* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*

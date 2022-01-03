@@ -17,11 +17,14 @@
 package scan_test
 
 import (
+	"bytes"
+	"encoding/json"
 	"fmt"
 	"io"
 	"os"
 	"path/filepath"
 
+	"github.com/accurics/terrascan/pkg/policy"
 	"github.com/accurics/terrascan/pkg/utils"
 	scanUtils "github.com/accurics/terrascan/test/e2e/scan"
 	"github.com/accurics/terrascan/test/helper"
@@ -81,10 +84,10 @@ var _ = Describe("Scan", func() {
 	Describe("scan command is run", func() {
 		Context("when no iac type is provided, terrascan scans with all iac providers", func() {
 			Context("no tf files are present in the working directory", func() {
-				It("scan the directory and display results", func() {
+				It("scans the directory with all iac and display results", func() {
 					scanArgs := []string{scanUtils.ScanCommand}
 					session = helper.RunCommand(terrascanBinaryPath, outWriter, errWriter, scanArgs...)
-					helper.ValidateExitCode(session, scanUtils.ScanTimeout, helper.ExitCodeZero)
+					helper.ValidateExitCode(session, scanUtils.ScanTimeout, helper.ExitCodeFour)
 				})
 				Context("iac loading errors would be displayed in the output, output type is json", func() {
 					It("scan the directory and display results", func() {
@@ -106,17 +109,17 @@ var _ = Describe("Scan", func() {
 				})
 			})
 			Context("tf files are present in the working directory", func() {
-				It("should scan the directory, return results and exit with status code 3", func() {
+				It("should scan the directory, return results and exit with status code 3 as there would no directory scan errors", func() {
 					workDir, err := filepath.Abs(filepath.Join(awsIacRelPath, "aws_ami_violation"))
 					Expect(err).NotTo(HaveOccurred())
 
-					scanArgs := []string{scanUtils.ScanCommand}
+					scanArgs := []string{scanUtils.ScanCommand, "-i", "terraform", "--non-recursive"}
 					session = helper.RunCommandDir(terrascanBinaryPath, workDir, outWriter, errWriter, scanArgs...)
 					Eventually(session, scanUtils.ScanTimeout).Should(gexec.Exit(helper.ExitCodeThree))
 				})
 
 				When("tf file present in the dir has no violations", func() {
-					Context("when there are no violations, terrascan exits with status code 0", func() {
+					Context("when there are no violations, but has dir scan erros, terrascan exits with status code 4", func() {
 						It("should scan the directory and exit with status code 0", func() {
 							workDir, err := filepath.Abs(filepath.Join(awsIacRelPath, "aws_db_instance_violation"))
 							Expect(err).NotTo(HaveOccurred())
@@ -127,7 +130,7 @@ var _ = Describe("Scan", func() {
 
 							scanArgs := []string{scanUtils.ScanCommand, "-p", policyDir}
 							session = helper.RunCommandDir(terrascanBinaryPath, workDir, outWriter, errWriter, scanArgs...)
-							Eventually(session, scanUtils.ScanTimeout).Should(gexec.Exit(helper.ExitCodeZero))
+							Eventually(session, scanUtils.ScanTimeout).Should(gexec.Exit(helper.ExitCodeFour))
 						})
 					})
 				})
@@ -194,10 +197,10 @@ var _ = Describe("Scan", func() {
 
 		When("--iac-version flag is supplied invalid version", func() {
 			Context("default iac type is all and --iac-version would be ignored", func() {
-				It("should error out and exit with status code 1", func() {
+				It("should error out and exit with status code 4", func() {
 					scanArgs := []string{scanUtils.ScanCommand, "--iac-version", "test"}
 					session = helper.RunCommand(terrascanBinaryPath, outWriter, errWriter, scanArgs...)
-					helper.ValidateExitCode(session, scanUtils.ScanTimeout, helper.ExitCodeZero)
+					helper.ValidateExitCode(session, scanUtils.ScanTimeout, helper.ExitCodeFour)
 				})
 			})
 		})
@@ -276,9 +279,9 @@ var _ = Describe("Scan", func() {
 						It("should scan with the policies and exit with status code 0", func() {
 							scanArgs := []string{scanUtils.ScanCommand, "-p", validPolicyPath1, "-p", validPolicyPath2}
 							session = helper.RunCommandDir(terrascanBinaryPath, workDirPath, outWriter, errWriter, scanArgs...)
-							// exits with status code 0, because all iac scan should display results
-							// and the directory doesn't have iac files for violations
-							Eventually(session, scanUtils.ScanTimeout).Should(gexec.Exit(helper.ExitCodeZero))
+							// exits with status code 4, because there are no iac files for violations but
+							// would contain directory scan errors
+							Eventually(session, scanUtils.ScanTimeout).Should(gexec.Exit(helper.ExitCodeFour))
 						})
 					})
 
@@ -292,6 +295,53 @@ var _ = Describe("Scan", func() {
 						})
 					})
 				})
+			})
+		})
+	})
+
+	Describe("terrascan scan command is run with notification webhook and repo detail flags", func() {
+
+		notificationURL := "https://httpbin.org/post"
+		notificationToken := "token"
+
+		tfGoldenRelPath := filepath.Join("golden", "terraform_scans")
+		tfAwsAmiGoldenRelPath := filepath.Join(tfGoldenRelPath, "aws", "aws_ami_violations")
+
+		iacDir, err1 := filepath.Abs(filepath.Join(awsIacRelPath, "aws_ami_violation"))
+		policyDir, err2 := filepath.Abs(policyRootRelPath)
+		It("should not error out while getting absolute path", func() {
+			Expect(err1).NotTo(HaveOccurred())
+			Expect(err2).NotTo(HaveOccurred())
+		})
+		Context("valid --webhook-url and --webhook-token flag is supplied", func() {
+			It("should scan and display violations in human output format and exit with status code 3", func() {
+				scanArgs := []string{"-p", policyDir, "-i", "terraform", "-d", iacDir, "--webhook-url", notificationURL, "--webhook-token", notificationToken}
+				scanUtils.RunScanAndAssertGoldenOutputRegex(terrascanBinaryPath, filepath.Join(tfAwsAmiGoldenRelPath, "aws_ami_violation_human.txt"), helper.ExitCodeThree, false, true, outWriter, errWriter, scanArgs...)
+
+			})
+		})
+
+		Context("only --webhook-url flag is supplied", func() {
+			It("should scan and display violations in human output format and exit with status code 3", func() {
+				scanArgs := []string{"-p", policyDir, "-i", "terraform", "-d", iacDir, "--webhook-url", notificationURL}
+				scanUtils.RunScanAndAssertGoldenOutputRegex(terrascanBinaryPath, filepath.Join(tfAwsAmiGoldenRelPath, "aws_ami_violation_human.txt"), helper.ExitCodeThree, false, true, outWriter, errWriter, scanArgs...)
+
+			})
+		})
+		Context("terrascan scan command is run with --repo-url and --repo-ref flag", func() {
+			It("should scan and result in json output format and exit with status code 3", func() {
+				scanArgs := []string{"scan", "-p", policyDir, "-i", "terraform", "-d", iacDir, "--repo-url", "https://github.com/accurics/terrascan.git", "--repo-ref", "main", "-o", "json"}
+				// scanUtils.RunScanAndAssertGoldenOutputRegex(terrascanBinaryPath, filepath.Join(tfAwsAmiGoldenRelPath, "aws_ami_violation_human_with_repo_detail.txt"), helper.ExitCodeThree, false, true, outWriter, errWriter, scanArgs...)
+				session := helper.RunCommand(terrascanBinaryPath, outWriter, errWriter, scanArgs...)
+				Eventually(session, 3).Should(gexec.Exit(helper.ExitCodeThree))
+				sessionBytes := session.Wait().Out.Contents()
+				sessionBytes = bytes.TrimSpace(sessionBytes)
+				var sessionEngineOutput policy.EngineOutput
+
+				err := json.Unmarshal(sessionBytes, &sessionEngineOutput)
+				Expect(err).NotTo(HaveOccurred())
+				Expect(sessionEngineOutput.Summary.ResourcePath).To((Equal("https://github.com/accurics/terrascan.git")))
+				Expect(sessionEngineOutput.Summary.Branch).To((Equal("main")))
 			})
 		})
 	})
