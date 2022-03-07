@@ -43,7 +43,7 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/hashicorp/terraform v0.15.3
 	github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
 	github.com/iancoleman/strcase v0.2.0
-	github.com/itchyny/gojq v0.12.1
+	github.com/itchyny/gojq v0.12.7
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
 	github.com/mattn/go-isatty v0.0.12
 	github.com/mitchellh/go-homedir v1.1.0
