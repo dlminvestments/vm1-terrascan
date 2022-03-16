@@ -56,7 +56,7 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/afero v1.6.0
 	github.com/spf13/cobra v1.2.1
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.7.1
 dependabot/go_modules/github.com/spf13/cobra-1.2.1
 	github.com/zclconf/go-cty v1.8.3
 	go.uber.org/zap v1.17.0
