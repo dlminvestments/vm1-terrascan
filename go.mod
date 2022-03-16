@@ -11,9 +11,9 @@ replace (
 
 require (
 dependabot/go_modules/github.com/spf13/cobra-1.2.1
-	cloud.google.com/go v0.81.0
+	cloud.google.com/go v0.100.2
 =======
-	cloud.google.com/go v0.65.0
+	cloud.google.com/go v0.100.2
 dependabot/docker/build/alpine-3.15.0
 	github.com/Azure/go-autorest/autorest v0.11.24
 	github.com/Azure/go-autorest/autorest/azure/auth v0.4.2
