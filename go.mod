@@ -61,7 +61,7 @@ dependabot/go_modules/github.com/spf13/cobra-1.2.1
 	github.com/zclconf/go-cty v1.8.3
 	go.uber.org/zap v1.17.0
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
-	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef
+	golang.org/x/sys 039c03cc5b86
 	google.golang.org/api v0.44.0
 	google.golang.org/genproto v0.0.0-20210602131652-f16073e35f0c
 	gopkg.in/src-d/go-git.v4 v4.13.1
@@ -73,27 +73,27 @@ dependabot/go_modules/github.com/spf13/cobra-1.2.1
 dependabot/go_modules/github.com/iancoleman/strcase-0.2.0
 dependabot/go_modules/github.com/iancoleman/strcase-0.2.0
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
-	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef
+	golang.org/x/sys 039c03cc5b86
 =======
-	golang.org/x/sys v0.0.0-20211205182925-97ca703d548d
+	golang.org/x/sys 039c03cc5b86
 	golang.org/x/tools v0.1.8 // indirect
 dependabot/docker/build/alpine-3.15.0
 =======
 dependabot/go_modules/github.com/zclconf/go-cty-1.9.1
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
-	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef
+	golang.org/x/sys 039c03cc5b86
 =======
 dependabot/go_modules/github.com/go-errors/errors-1.4.1
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
-	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef
+	golang.org/x/sys 039c03cc5b86
 =======
 f/go-sum
 	golang.org/x/mod v0.5.1 // indirect
 	golang.org/x/oauth2 v0.0.0-20200902213428-5d25da1a8d43 // indirect
-	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef
+	golang.org/x/sys 039c03cc5b86
 	golang.org/x/tools v0.1.7 // indirect
 =======
-	golang.org/x/sys v0.0.0-20211205182925-97ca703d548d
+	golang.org/x/sys 039c03cc5b86
 	golang.org/x/tools v0.1.8 // indirect
 dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
