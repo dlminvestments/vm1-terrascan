@@ -50,7 +50,7 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/moby/buildkit v0.8.3
 	github.com/onsi/ginkgo v1.15.1
 	github.com/onsi/gomega v1.11.0
-	github.com/open-policy-agent/opa v0.22.0
+	github.com/open-policy-agent/opa v0.38.1
 	github.com/owenrumney/go-sarif v1.0.12
 	github.com/pelletier/go-toml v1.9.4
 	github.com/pkg/errors v0.9.1
