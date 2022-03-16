@@ -48,7 +48,7 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/mattn/go-isatty v0.0.14
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/moby/buildkit v0.8.3
-	github.com/onsi/ginkgo v1.15.1
+	github.com/onsi/ginkgo v1.16.5
 	github.com/onsi/gomega v1.11.0
 	github.com/open-policy-agent/opa v0.22.0
 	github.com/owenrumney/go-sarif v1.0.12
