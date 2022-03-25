@@ -11,26 +11,48 @@ replace (
 
 require (
 dependabot/go_modules/github.com/spf13/cobra-1.2.1
-	cloud.google.com/go v0.81.0
+	cloud.google.com/go v0.100.2
 =======
-	cloud.google.com/go v0.65.0
+	cloud.google.com/go v0.100.2
 dependabot/docker/build/alpine-3.15.0
 	github.com/Azure/go-autorest/autorest v0.11.24
-	github.com/Azure/go-autorest/autorest/azure/auth v0.4.2
+	github.com/Azure/go-autorest/autorest/azure/auth v0.5.11
 	github.com/GoogleCloudPlatform/docker-credential-gcr v2.0.5+incompatible
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/VerbalExpressions/GoVerbalExpressions v0.0.0-20200410162751-4d76a1099a6e
+renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 	github.com/aws/aws-sdk-go v1.37.0
+	github.com/aws/aws-sdk-go-v2/config v1.15.2
+=======
+	github.com/aws/aws-sdk-go v1.43.26
 	github.com/aws/aws-sdk-go-v2/config v1.5.0
+renovate/github.com-aws-aws-sdk-go-v2-feature-s3-manager-1.x
+	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.11.2
+=======
+dependabot/docker/build/alpine-3.15.0
 	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.3.2
+renovate/github.com-aws-aws-sdk-go-v2-service-s3-1.x
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.26.2
+=======
+dependabot/docker/build/alpine-3.15.0
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.11.1
+renovate/github.com-aws-smithy-go-1.x
+	github.com/aws/smithy-go v1.11.2
+=======
+dependabot/docker/build/alpine-3.15.0
 	github.com/aws/smithy-go v1.6.0
+dependabot/docker/build/alpine-3.15.0
 	github.com/awslabs/goformation/v4 v4.19.5
 	github.com/docker/cli v20.10.5+incompatible // indirect
 	github.com/ghodss/yaml v1.0.0
 	github.com/go-errors/errors v1.4.2
+renovate/github.com-google-uuid-1.x
 	github.com/google/go-containerregistry v0.1.2
 	github.com/google/uuid v1.3.0
+=======
+	github.com/google/go-containerregistry v0.8.0
+	github.com/google/uuid v1.2.0
+dependabot/docker/build/alpine-3.15.0
 	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.8.0
 	github.com/hashicorp/go-cleanhttp v0.5.2
@@ -56,7 +78,7 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/afero v1.6.0
 	github.com/spf13/cobra v1.2.1
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.7.1
 dependabot/go_modules/github.com/spf13/cobra-1.2.1
 	github.com/zclconf/go-cty v1.8.3
 	go.uber.org/zap v1.17.0
@@ -107,8 +129,8 @@ dependabot/docker/build/alpine-3.15.0
 	helm.sh/helm/v3 v3.6.1
 	honnef.co/go/tools v0.2.2 // indirect
 dependabot/docker/build/alpine-3.15.0
-	k8s.io/api v0.21.0
-	k8s.io/apimachinery v0.21.0
+	k8s.io/api v0.23.5
+	k8s.io/apimachinery v0.23.5
 	k8s.io/client-go v10.0.0+incompatible
 	modernc.org/sqlite v1.11.1
 	sigs.k8s.io/kustomize/api v0.8.11
