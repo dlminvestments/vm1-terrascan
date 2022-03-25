@@ -26,8 +26,12 @@ renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 =======
 	github.com/aws/aws-sdk-go v1.43.26
 	github.com/aws/aws-sdk-go-v2/config v1.5.0
+renovate/github.com-aws-aws-sdk-go-v2-feature-s3-manager-1.x
+	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.11.2
+=======
 dependabot/docker/build/alpine-3.15.0
 	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.3.2
+dependabot/docker/build/alpine-3.15.0
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.11.1
 	github.com/aws/smithy-go v1.6.0
 	github.com/awslabs/goformation/v4 v4.19.5
