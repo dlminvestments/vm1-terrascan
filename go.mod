@@ -20,7 +20,7 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/GoogleCloudPlatform/docker-credential-gcr v2.0.5+incompatible
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/VerbalExpressions/GoVerbalExpressions v0.0.0-20200410162751-4d76a1099a6e
-	github.com/aws/aws-sdk-go v1.37.0
+	github.com/aws/aws-sdk-go v1.43.26
 	github.com/aws/aws-sdk-go-v2/config v1.5.0
 	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.3.2
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.11.1
