@@ -66,7 +66,7 @@ renovate/github.com-hashicorp-go-version-1.x
 	github.com/hashicorp/go-version v1.2.1
 dependabot/docker/build/alpine-3.15.0
 	github.com/hashicorp/hcl v1.0.0
-	github.com/hashicorp/hcl/v2 v2.10.1
+	github.com/hashicorp/hcl/v2 v2.11.1
 	github.com/hashicorp/terraform v0.15.5
 	github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
 	github.com/iancoleman/strcase v0.2.0
