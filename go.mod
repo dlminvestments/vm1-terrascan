@@ -80,8 +80,12 @@ renovate/github.com-onsi-ginkgo-1.x
 =======
 	github.com/moby/buildkit v0.10.0
 	github.com/onsi/ginkgo v1.15.1
+renovate/github.com-onsi-gomega-1.x
+	github.com/onsi/gomega v1.19.0
+=======
 dependabot/docker/build/alpine-3.15.0
 	github.com/onsi/gomega v1.11.0
+dependabot/docker/build/alpine-3.15.0
 	github.com/open-policy-agent/opa v0.22.0
 	github.com/owenrumney/go-sarif v1.0.12
 	github.com/pelletier/go-toml v1.9.4
