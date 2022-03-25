@@ -16,7 +16,7 @@ dependabot/go_modules/github.com/spf13/cobra-1.2.1
 	cloud.google.com/go v0.100.2
 dependabot/docker/build/alpine-3.15.0
 	github.com/Azure/go-autorest/autorest v0.11.24
-	github.com/Azure/go-autorest/autorest/azure/auth v0.4.2
+	github.com/Azure/go-autorest/autorest/azure/auth v0.5.11
 	github.com/GoogleCloudPlatform/docker-credential-gcr v2.0.5+incompatible
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/VerbalExpressions/GoVerbalExpressions v0.0.0-20200410162751-4d76a1099a6e
