@@ -2,7 +2,7 @@ terraform {
  required_providers {
    kubernetes-beta = {
      source  = "hashicorp/kubernetes"
-     version = "= 2.3.2"
+     version = "=2.9.0"
    }
  }
 }
