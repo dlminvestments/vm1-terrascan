@@ -58,40 +58,82 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/hashicorp/go-cleanhttp v0.5.2
 	github.com/hashicorp/go-getter v1.5.11
 	github.com/hashicorp/go-multierror v1.1.1
+renovate/github.com-hashicorp-go-version-1.x
+	github.com/hashicorp/go-retryablehttp v0.6.6
+	github.com/hashicorp/go-version v1.4.0
+=======
 	github.com/hashicorp/go-retryablehttp v0.7.0
 	github.com/hashicorp/go-version v1.2.1
+dependabot/docker/build/alpine-3.15.0
 	github.com/hashicorp/hcl v1.0.0
+renovate/github.com-hashicorp-terraform-1.x
 	github.com/hashicorp/hcl/v2 v2.10.1
 	github.com/hashicorp/terraform v1.1.7
+=======
+	github.com/hashicorp/hcl/v2 v2.11.1
+	github.com/hashicorp/terraform v0.15.5
+dependabot/docker/build/alpine-3.15.0
 	github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
 	github.com/iancoleman/strcase v0.2.0
 	github.com/itchyny/gojq v0.12.7
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
 	github.com/mattn/go-isatty v0.0.14
 	github.com/mitchellh/go-homedir v1.1.0
+renovate/github.com-onsi-ginkgo-1.x
 	github.com/moby/buildkit v0.8.3
+	github.com/onsi/ginkgo v1.16.5
+=======
+	github.com/moby/buildkit v0.10.0
 	github.com/onsi/ginkgo v1.15.1
+renovate/github.com-onsi-gomega-1.x
+	github.com/onsi/gomega v1.19.0
+=======
+dependabot/docker/build/alpine-3.15.0
 	github.com/onsi/gomega v1.11.0
+renovate/github.com-open-policy-agent-opa-0.x
+	github.com/open-policy-agent/opa v0.38.1
+=======
+dependabot/docker/build/alpine-3.15.0
 	github.com/open-policy-agent/opa v0.22.0
+renovate/github.com-owenrumney-go-sarif-1.x
+	github.com/owenrumney/go-sarif v1.1.1
+=======
+dependabot/docker/build/alpine-3.15.0
 	github.com/owenrumney/go-sarif v1.0.12
+dependabot/docker/build/alpine-3.15.0
 	github.com/pelletier/go-toml v1.9.4
 	github.com/pkg/errors v0.9.1
+renovate/github.com-spf13-cobra-1.x
 	github.com/spf13/afero v1.6.0
+	github.com/spf13/cobra v1.4.0
+=======
+	github.com/spf13/afero v1.8.2
 	github.com/spf13/cobra v1.2.1
+dependabot/docker/build/alpine-3.15.0
 	github.com/stretchr/testify v1.7.1
 dependabot/go_modules/github.com/spf13/cobra-1.2.1
+renovate/go.uber.org-zap-1.x
 	github.com/zclconf/go-cty v1.8.3
+	go.uber.org/zap v1.21.0
+=======
+	github.com/zclconf/go-cty v1.10.0
 	go.uber.org/zap v1.17.0
+dependabot/docker/build/alpine-3.15.0
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
 	golang.org/x/sys 039c03cc5b86
-	google.golang.org/api v0.44.0
+	google.golang.org/api v0.73.0
 	google.golang.org/genproto 57ef72a4c106
 	gopkg.in/src-d/go-git.v4 v4.13.1
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
-	helm.sh/helm/v3 v3.6.1
+	helm.sh/helm/v3 v3.8.1
 =======
+renovate/go.uber.org-zap-1.x
 	github.com/zclconf/go-cty v1.9.1
+	go.uber.org/zap v1.21.0
+=======
+	github.com/zclconf/go-cty v1.10.0
 	go.uber.org/zap v1.16.0
+dependabot/docker/build/alpine-3.15.0
 dependabot/go_modules/github.com/iancoleman/strcase-0.2.0
 dependabot/go_modules/github.com/iancoleman/strcase-0.2.0
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
@@ -121,18 +163,27 @@ dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
-	google.golang.org/api v0.34.0
+	google.golang.org/api v0.73.0
 	google.golang.org/genproto 57ef72a4c106
 	google.golang.org/grpc v1.31.1 // indirect
 	gopkg.in/src-d/go-git.v4 v4.13.1
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
-	helm.sh/helm/v3 v3.6.1
+	helm.sh/helm/v3 v3.8.1
 	honnef.co/go/tools v0.2.2 // indirect
 dependabot/docker/build/alpine-3.15.0
 	k8s.io/api v0.23.5
 	k8s.io/apimachinery v0.23.5
 	k8s.io/client-go v10.0.0+incompatible
+renovate/sigs.k8s.io-kustomize-api-0.x
 	modernc.org/sqlite v1.11.1
+	sigs.k8s.io/kustomize/api v0.11.3
+=======
+	modernc.org/sqlite v1.15.3
 	sigs.k8s.io/kustomize/api v0.8.11
+renovate/sigs.k8s.io-kustomize-kyaml-0.x
+	sigs.k8s.io/kustomize/kyaml v0.13.5
+=======
+dependabot/docker/build/alpine-3.15.0
 	sigs.k8s.io/kustomize/kyaml v0.11.0
+dependabot/docker/build/alpine-3.15.0
 )
