@@ -90,8 +90,12 @@ renovate/github.com-open-policy-agent-opa-0.x
 =======
 dependabot/docker/build/alpine-3.15.0
 	github.com/open-policy-agent/opa v0.22.0
+renovate/github.com-owenrumney-go-sarif-1.x
+	github.com/owenrumney/go-sarif v1.1.1
+=======
 dependabot/docker/build/alpine-3.15.0
 	github.com/owenrumney/go-sarif v1.0.12
+dependabot/docker/build/alpine-3.15.0
 	github.com/pelletier/go-toml v1.9.4
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/afero v1.6.0
