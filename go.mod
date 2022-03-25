@@ -107,8 +107,13 @@ renovate/github.com-spf13-cobra-1.x
 dependabot/docker/build/alpine-3.15.0
 	github.com/stretchr/testify v1.7.1
 dependabot/go_modules/github.com/spf13/cobra-1.2.1
+renovate/go.uber.org-zap-1.x
+	github.com/zclconf/go-cty v1.8.3
+	go.uber.org/zap v1.21.0
+=======
 	github.com/zclconf/go-cty v1.10.0
 	go.uber.org/zap v1.17.0
+dependabot/docker/build/alpine-3.15.0
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
 	golang.org/x/sys 039c03cc5b86
 	google.golang.org/api v0.44.0
@@ -117,8 +122,13 @@ dependabot/go_modules/github.com/spf13/cobra-1.2.1
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
 	helm.sh/helm/v3 v3.6.1
 =======
+renovate/go.uber.org-zap-1.x
+	github.com/zclconf/go-cty v1.9.1
+	go.uber.org/zap v1.21.0
+=======
 	github.com/zclconf/go-cty v1.10.0
 	go.uber.org/zap v1.16.0
+dependabot/docker/build/alpine-3.15.0
 dependabot/go_modules/github.com/iancoleman/strcase-0.2.0
 dependabot/go_modules/github.com/iancoleman/strcase-0.2.0
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
