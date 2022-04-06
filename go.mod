@@ -104,7 +104,7 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/pelletier/go-toml v1.9.4
 	github.com/pkg/errors v0.9.1
 renovate/github.com-spf13-cobra-1.x
-	github.com/spf13/afero v1.6.0
+	github.com/spf13/afero v1.8.2
 	github.com/spf13/cobra v1.4.0
 =======
 	github.com/spf13/afero v1.8.2
