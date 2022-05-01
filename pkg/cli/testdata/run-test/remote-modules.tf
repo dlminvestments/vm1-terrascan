@@ -14,5 +14,5 @@ module "eks" {
 ## contains local modules
 module "rds" {
   source  = "terraform-aws-modules/rds/aws"
-  version = "4.2.0"
+  version = "4.3.0"
 }
