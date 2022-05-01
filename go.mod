@@ -89,7 +89,7 @@ renovate/github.com-onsi-gomega-1.x
 	github.com/onsi/gomega v1.19.0
 =======
 dependabot/docker/build/alpine-3.15.0
-	github.com/onsi/gomega v1.11.0
+	github.com/onsi/gomega v1.19.0
 renovate/github.com-open-policy-agent-opa-0.x
 	github.com/open-policy-agent/opa v0.39.0
 =======
