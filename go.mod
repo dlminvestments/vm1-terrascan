@@ -99,7 +99,7 @@ renovate/github.com-owenrumney-go-sarif-1.x
 	github.com/owenrumney/go-sarif v1.1.1
 =======
 dependabot/docker/build/alpine-3.15.0
-	github.com/owenrumney/go-sarif v1.0.12
+	github.com/owenrumney/go-sarif v1.1.1
 dependabot/docker/build/alpine-3.15.0
 	github.com/pelletier/go-toml v1.9.5
 	github.com/pkg/errors v0.9.1
