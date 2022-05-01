@@ -117,7 +117,7 @@ renovate/go.uber.org-zap-1.x
 	go.uber.org/zap v1.21.0
 =======
 	github.com/zclconf/go-cty v1.10.0
-	go.uber.org/zap v1.17.0
+	go.uber.org/zap v1.21.0
 dependabot/docker/build/alpine-3.15.0
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
 	golang.org/x/sys 039c03cc5b86
@@ -132,7 +132,7 @@ renovate/go.uber.org-zap-1.x
 	go.uber.org/zap v1.21.0
 =======
 	github.com/zclconf/go-cty v1.10.0
-	go.uber.org/zap v1.16.0
+	go.uber.org/zap v1.21.0
 dependabot/docker/build/alpine-3.15.0
 dependabot/go_modules/github.com/iancoleman/strcase-0.2.0
 dependabot/go_modules/github.com/iancoleman/strcase-0.2.0
