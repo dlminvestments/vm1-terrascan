@@ -84,7 +84,7 @@ renovate/github.com-onsi-ginkgo-1.x
 	github.com/onsi/ginkgo v1.16.5
 =======
 	github.com/moby/buildkit v0.10.2
-	github.com/onsi/ginkgo v1.15.1
+	github.com/onsi/ginkgo v1.16.5
 renovate/github.com-onsi-gomega-1.x
 	github.com/onsi/gomega v1.19.0
 =======
