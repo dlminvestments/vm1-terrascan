@@ -40,7 +40,7 @@ renovate/github.com-aws-smithy-go-1.x
 	github.com/aws/smithy-go v1.11.2
 =======
 dependabot/docker/build/alpine-3.15.0
-	github.com/aws/smithy-go v1.6.0
+	github.com/aws/smithy-go v1.11.2
 dependabot/docker/build/alpine-3.15.0
 	github.com/awslabs/goformation/v4 v4.19.5
 	github.com/docker/cli v20.10.5+incompatible // indirect
