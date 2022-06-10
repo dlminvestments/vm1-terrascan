@@ -21,10 +21,10 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/VerbalExpressions/GoVerbalExpressions v0.0.0-20200410162751-4d76a1099a6e
 renovate/github.com-aws-aws-sdk-go-v2-config-1.x
-	github.com/aws/aws-sdk-go v1.44.27
+	github.com/aws/aws-sdk-go v1.44.32
 	github.com/aws/aws-sdk-go-v2/config v1.15.9
 =======
-	github.com/aws/aws-sdk-go v1.44.27
+	github.com/aws/aws-sdk-go v1.44.32
 	github.com/aws/aws-sdk-go-v2/config v1.15.9
 renovate/github.com-aws-aws-sdk-go-v2-feature-s3-manager-1.x
 	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.11.14
