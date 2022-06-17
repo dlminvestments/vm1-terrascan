@@ -27,10 +27,10 @@ renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 	github.com/aws/aws-sdk-go v1.44.35
 	github.com/aws/aws-sdk-go-v2/config v1.15.10
 renovate/github.com-aws-aws-sdk-go-v2-feature-s3-manager-1.x
-	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.11.15
+	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.11.16
 =======
 dependabot/docker/build/alpine-3.15.0
-	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.11.15
+	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.11.16
 renovate/github.com-aws-aws-sdk-go-v2-service-s3-1.x
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.26.11
 =======
