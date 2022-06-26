@@ -3,7 +3,7 @@ terraform {
 }
 
 provider "aws" {
-  version = "4.18.0"
+  version = "4.20.1"
   region  = "us-east-1"
 }
 
