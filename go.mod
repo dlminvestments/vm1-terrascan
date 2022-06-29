@@ -110,7 +110,7 @@ renovate/github.com-spf13-cobra-1.x
 	github.com/spf13/afero v1.8.2
 	github.com/spf13/cobra v1.4.0
 dependabot/docker/build/alpine-3.15.0
-	github.com/stretchr/testify v1.7.5
+	github.com/stretchr/testify v1.8.0
 dependabot/go_modules/github.com/spf13/cobra-1.2.1
 renovate/go.uber.org-zap-1.x
 	github.com/zclconf/go-cty v1.10.0
