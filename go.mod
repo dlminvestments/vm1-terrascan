@@ -22,10 +22,10 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/VerbalExpressions/GoVerbalExpressions v0.0.0-20200410162751-4d76a1099a6e
 renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 	github.com/aws/aws-sdk-go v1.44.42
-	github.com/aws/aws-sdk-go-v2/config v1.15.10
+	github.com/aws/aws-sdk-go-v2/config v1.15.12
 =======
 	github.com/aws/aws-sdk-go v1.44.42
-	github.com/aws/aws-sdk-go-v2/config v1.15.10
+	github.com/aws/aws-sdk-go-v2/config v1.15.12
 renovate/github.com-aws-aws-sdk-go-v2-feature-s3-manager-1.x
 	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.11.16
 =======
