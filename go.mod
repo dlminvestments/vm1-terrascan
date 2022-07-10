@@ -37,10 +37,10 @@ renovate/github.com-aws-aws-sdk-go-v2-service-s3-1.x
 dependabot/docker/build/alpine-3.15.0
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.27.0
 renovate/github.com-aws-smithy-go-1.x
-	github.com/aws/smithy-go v1.11.3
+	github.com/aws/smithy-go v1.12.0
 =======
 dependabot/docker/build/alpine-3.15.0
-	github.com/aws/smithy-go v1.11.3
+	github.com/aws/smithy-go v1.12.0
 dependabot/docker/build/alpine-3.15.0
 	github.com/awslabs/goformation/v4 v4.19.5
 	github.com/docker/cli v20.10.5+incompatible // indirect
