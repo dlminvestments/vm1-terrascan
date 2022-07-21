@@ -171,8 +171,8 @@ dependabot/docker/build/alpine-3.15.0
 	helm.sh/helm/v3 v3.9.1
 	honnef.co/go/tools v0.2.2 // indirect
 dependabot/docker/build/alpine-3.15.0
-	k8s.io/api v0.24.2
-	k8s.io/apimachinery v0.24.2
+	k8s.io/api v0.24.3
+	k8s.io/apimachinery v0.24.3
 	k8s.io/client-go v10.0.0+incompatible
 renovate/sigs.k8s.io-kustomize-api-0.x
 	modernc.org/sqlite v1.17.3
