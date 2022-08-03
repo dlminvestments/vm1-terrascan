@@ -21,11 +21,19 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/VerbalExpressions/GoVerbalExpressions v0.0.0-20200410162751-4d76a1099a6e
 renovate/github.com-aws-aws-sdk-go-v2-config-1.x
+renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 	github.com/aws/aws-sdk-go v1.44.66
 	github.com/aws/aws-sdk-go-v2/config v1.15.15
 =======
 	github.com/aws/aws-sdk-go v1.44.66
 	github.com/aws/aws-sdk-go-v2/config v1.15.15
+=======
+	github.com/aws/aws-sdk-go v1.44.68
+	github.com/aws/aws-sdk-go-v2/config v1.15.14
+=======
+	github.com/aws/aws-sdk-go v1.44.68
+	github.com/aws/aws-sdk-go-v2/config v1.15.14
+dependabot/docker/build/alpine-3.15.0
 renovate/github.com-aws-aws-sdk-go-v2-feature-s3-manager-1.x
 	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.11.20
 =======
@@ -176,10 +184,10 @@ dependabot/docker/build/alpine-3.15.0
 	k8s.io/client-go v10.0.0+incompatible
 renovate/sigs.k8s.io-kustomize-api-0.x
 	modernc.org/sqlite v1.18.0
-	sigs.k8s.io/kustomize/api v0.11.5
+	sigs.k8s.io/kustomize/api v0.12.1
 =======
 	modernc.org/sqlite v1.18.0
-	sigs.k8s.io/kustomize/api v0.11.5
+	sigs.k8s.io/kustomize/api v0.12.1
 renovate/sigs.k8s.io-kustomize-kyaml-0.x
 	sigs.k8s.io/kustomize/kyaml v0.13.8
 =======
