@@ -22,8 +22,18 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/VerbalExpressions/GoVerbalExpressions v0.0.0-20200410162751-4d76a1099a6e
 renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 renovate/github.com-aws-aws-sdk-go-v2-config-1.x
-	github.com/aws/aws-sdk-go v1.44.91
-	github.com/aws/aws-sdk-go-v2/config v1.17.1
+renovate/github.com-aws-aws-sdk-go-v2-config-1.x
+	github.com/aws/aws-sdk-go v1.44.86
+	github.com/aws/aws-sdk-go-v2/config v1.17.5
+=======
+	github.com/aws/aws-sdk-go v1.44.86
+	github.com/aws/aws-sdk-go-v2/config v1.17.5
+=======
+	github.com/aws/aws-sdk-go v1.44.86
+	github.com/aws/aws-sdk-go-v2/config v1.17.5
+=======
+	github.com/aws/aws-sdk-go v1.44.86
+	github.com/aws/aws-sdk-go-v2/config v1.17.5
 =======
 	github.com/aws/aws-sdk-go v1.44.91
 	github.com/aws/aws-sdk-go-v2/config v1.17.1
@@ -33,6 +43,10 @@ renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 =======
 	github.com/aws/aws-sdk-go v1.44.91
 	github.com/aws/aws-sdk-go-v2/config v1.17.1
+=======
+	github.com/aws/aws-sdk-go v1.44.91
+	github.com/aws/aws-sdk-go-v2/config v1.17.1
+dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
 renovate/github.com-aws-aws-sdk-go-v2-feature-s3-manager-1.x
 	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.11.27
