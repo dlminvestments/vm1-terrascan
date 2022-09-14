@@ -6,7 +6,7 @@ replace (
 	github.com/tencentcloud/tencentcloud-sdk-go v3.0.82+incompatible => github.com/tencentcloud/tencentcloud-sdk-go v1.0.191
 	k8s.io/api => k8s.io/api v0.25.0
 	k8s.io/apimachinery => k8s.io/apimachinery v0.25.0
-	k8s.io/client-go => k8s.io/client-go v1.5.2
+	k8s.io/client-go/v11 => k8s.io/client-go v11.0.0+incompatible
 )
 
 require (
@@ -195,7 +195,7 @@ dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
 	k8s.io/api v0.25.0
 	k8s.io/apimachinery v0.25.0
-	k8s.io/client-go v10.0.0+incompatible
+	k8s.io/client-go/v11 v11.0.0+incompatible
 renovate/sigs.k8s.io-kustomize-api-0.x
 	modernc.org/sqlite v1.18.2
 	sigs.k8s.io/kustomize/api v0.12.1
