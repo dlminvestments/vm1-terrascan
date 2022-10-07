@@ -23,28 +23,28 @@ dependabot/docker/build/alpine-3.15.0
 renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 renovate/github.com-aws-aws-sdk-go-v2-config-1.x
-	github.com/aws/aws-sdk-go v1.44.109
+	github.com/aws/aws-sdk-go v1.44.113
 	github.com/aws/aws-sdk-go-v2/config v1.17.8
 =======
-	github.com/aws/aws-sdk-go v1.44.109
+	github.com/aws/aws-sdk-go v1.44.113
 	github.com/aws/aws-sdk-go-v2/config v1.17.8
 =======
-	github.com/aws/aws-sdk-go v1.44.109
+	github.com/aws/aws-sdk-go v1.44.113
 	github.com/aws/aws-sdk-go-v2/config v1.17.8
 =======
-	github.com/aws/aws-sdk-go v1.44.109
+	github.com/aws/aws-sdk-go v1.44.113
 	github.com/aws/aws-sdk-go-v2/config v1.17.8
 =======
-	github.com/aws/aws-sdk-go v1.44.109
+	github.com/aws/aws-sdk-go v1.44.113
 	github.com/aws/aws-sdk-go-v2/config v1.17.8
 =======
-	github.com/aws/aws-sdk-go v1.44.109
+	github.com/aws/aws-sdk-go v1.44.113
 	github.com/aws/aws-sdk-go-v2/config v1.17.8
 =======
-	github.com/aws/aws-sdk-go v1.44.109
+	github.com/aws/aws-sdk-go v1.44.113
 	github.com/aws/aws-sdk-go-v2/config v1.17.8
 =======
-	github.com/aws/aws-sdk-go v1.44.109
+	github.com/aws/aws-sdk-go v1.44.113
 	github.com/aws/aws-sdk-go-v2/config v1.17.8
 dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
