@@ -108,10 +108,10 @@ renovate/github.com-onsi-ginkgo-1.x
 	github.com/moby/buildkit v0.10.5
 	github.com/onsi/ginkgo v1.16.5
 renovate/github.com-onsi-gomega-1.x
-	github.com/onsi/gomega v1.23.0
+	github.com/onsi/gomega v1.24.0
 =======
 dependabot/docker/build/alpine-3.15.0
-	github.com/onsi/gomega v1.23.0
+	github.com/onsi/gomega v1.24.0
 renovate/github.com-open-policy-agent-opa-0.x
 	github.com/open-policy-agent/opa v0.45.0
 =======
