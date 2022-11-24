@@ -4,7 +4,7 @@
 
 module "network" {
   source  = "Azure/network/azurerm"
-  version = "4.0.1"
+  version = "4.1.0"
 }
 
 module "eks" {
