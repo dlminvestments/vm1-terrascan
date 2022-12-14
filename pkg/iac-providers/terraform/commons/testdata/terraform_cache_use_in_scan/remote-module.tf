@@ -4,6 +4,6 @@
 
 module "network" {
   source  = "Azure/network/azurerm"
-  version = "4.2.0"
+  version = "5.0.0"
 }
 
