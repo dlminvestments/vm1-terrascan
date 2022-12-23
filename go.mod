@@ -87,7 +87,7 @@ renovate/github.com-hashicorp-go-version-1.x
 	github.com/hashicorp/go-retryablehttp v0.7.1
 	github.com/hashicorp/go-version v1.6.0
 dependabot/docker/build/alpine-3.15.0
-	github.com/hashicorp/hcl v1.0.0
+	github.com/hashicorp/hcl/v2 v2.15.0
 renovate/github.com-hashicorp-terraform-1.x
 	github.com/hashicorp/hcl/v2 v2.15.0
 	github.com/hashicorp/terraform v1.3.6
