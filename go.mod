@@ -113,10 +113,10 @@ renovate/github.com-onsi-gomega-1.x
 dependabot/docker/build/alpine-3.15.0
 	github.com/onsi/gomega v1.24.2
 renovate/github.com-open-policy-agent-opa-0.x
-	github.com/open-policy-agent/opa v0.47.4
+	github.com/open-policy-agent/opa v0.48.0
 =======
 dependabot/docker/build/alpine-3.15.0
-	github.com/open-policy-agent/opa v0.47.4
+	github.com/open-policy-agent/opa v0.48.0
 renovate/github.com-owenrumney-go-sarif-1.x
 	github.com/owenrumney/go-sarif/v2 v2.1.2
 =======
