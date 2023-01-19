@@ -95,7 +95,7 @@ renovate/github.com-hashicorp-terraform-1.x
 	github.com/hashicorp/hcl/v2 v2.15.0
 	github.com/hashicorp/terraform v1.3.7
 dependabot/docker/build/alpine-3.15.0
-	github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
+	github.com/hashicorp/terraform-svchost eb1d73b78fd9
 	github.com/iancoleman/strcase v0.2.0
 	github.com/itchyny/gojq v0.12.11
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
