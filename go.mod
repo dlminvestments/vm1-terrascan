@@ -69,10 +69,10 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/ghodss/yaml v1.0.0
 	github.com/go-errors/errors v1.4.2
 renovate/github.com-google-uuid-1.x
-	github.com/google/go-containerregistry v0.12.1
+	github.com/google/go-containerregistry v0.13.0
 	github.com/google/uuid v1.3.0
 =======
-	github.com/google/go-containerregistry v0.12.1
+	github.com/google/go-containerregistry v0.13.0
 	github.com/google/uuid v1.3.0
 dependabot/docker/build/alpine-3.15.0
 	github.com/gorilla/handlers v1.5.1
