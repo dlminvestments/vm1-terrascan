@@ -78,7 +78,7 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.8.0
 	github.com/hashicorp/go-cleanhttp v0.5.2
-	github.com/hashicorp/go-getter/v2 v2.2.0
+	github.com/hashicorp/go-getter/v2 v2.2.1
 	github.com/hashicorp/go-multierror v1.1.1
 renovate/github.com-hashicorp-go-version-1.x
 	github.com/hashicorp/go-retryablehttp v0.7.2
