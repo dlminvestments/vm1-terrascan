@@ -127,10 +127,10 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/pkg/errors v0.9.1
 renovate/github.com-spf13-cobra-1.x
 	github.com/spf13/afero v1.9.5
-	github.com/spf13/cobra v1.6.1
+	github.com/spf13/cobra v1.7.0
 =======
 	github.com/spf13/afero v1.9.5
-	github.com/spf13/cobra v1.6.1
+	github.com/spf13/cobra v1.7.0
 dependabot/docker/build/alpine-3.15.0
 	github.com/stretchr/testify v1.8.2
 dependabot/go_modules/github.com/spf13/cobra-1.2.1
