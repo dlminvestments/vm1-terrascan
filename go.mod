@@ -99,7 +99,7 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/iancoleman/strcase v0.2.0
 	github.com/itchyny/gojq v0.12.12
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
-	github.com/mattn/go-isatty v0.0.18
+	github.com/mattn/go-isatty v0.0.19
 	github.com/mitchellh/go-homedir v1.1.0
 renovate/github.com-onsi-ginkgo-1.x
 	github.com/moby/buildkit v0.11.6
