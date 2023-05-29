@@ -1,8 +1,8 @@
 mkdocs==1.4.3
 pyup-update-mkdocs-material-8.0.5-to-8.1.1
-mkdocs-material==9.1.14
+mkdocs-material==9.1.15
 =======
-mkdocs-material==9.1.14
+mkdocs-material==9.1.15
 dependabot/docker/build/alpine-3.15.0
 mkdocs-diagrams==1.0.0
 mkdocs-redirects==1.2.0
