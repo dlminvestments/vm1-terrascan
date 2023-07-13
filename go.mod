@@ -96,7 +96,7 @@ renovate/github.com-hashicorp-terraform-1.x
 	github.com/hashicorp/terraform v1.5.2
 dependabot/docker/build/alpine-3.15.0
 	github.com/hashicorp/terraform-svchost eb1d73b78fd9
-	github.com/iancoleman/strcase v0.2.0
+	github.com/iancoleman/strcase v0.3.0
 	github.com/itchyny/gojq v0.12.13
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
 	github.com/mattn/go-isatty v0.0.19
