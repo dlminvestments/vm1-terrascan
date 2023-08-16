@@ -22,7 +22,7 @@ resource "kubernetes_replication_controller" "example" {
 
       spec {
         container {
-          image = "nginx:1.25.1"
+          image = "nginx:1.25.2"
           name  = "example"
 
           liveness_probe {
