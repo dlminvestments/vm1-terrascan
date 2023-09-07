@@ -67,7 +67,7 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/awslabs/goformation/v7 v7.12.1
 	github.com/docker/cli v20.10.5+incompatible // indirect
 	github.com/ghodss/yaml v1.0.0
-	github.com/go-errors/errors v1.4.2
+	github.com/go-errors/errors v1.5.0
 renovate/github.com-google-uuid-1.x
 	github.com/google/go-containerregistry v0.16.1
 	github.com/google/uuid v1.3.1
