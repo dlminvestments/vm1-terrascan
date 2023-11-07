@@ -76,7 +76,7 @@ renovate/github.com-google-uuid-1.x
 	github.com/google/uuid v1.4.0
 dependabot/docker/build/alpine-3.15.0
 	github.com/gorilla/handlers v1.5.2
-	github.com/gorilla/mux v1.8.0
+	github.com/gorilla/mux v1.8.1
 	github.com/hashicorp/go-cleanhttp v0.5.2
 	github.com/hashicorp/go-getter/v2 v2.2.1
 	github.com/hashicorp/go-multierror v1.1.1
