@@ -3,6 +3,6 @@ FROM golang:alpine AS builder
 RUN go build main.go
 
 # -------- prod stage -------- #
-FROM alpine:3.18.4
+FROM alpine:3.18.5
 COPY --from=builder /go/bin/terrascan /go/bin/terrascan
 ENTRYPOINT ["/go/bin/main"]
