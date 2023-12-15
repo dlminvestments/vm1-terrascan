@@ -4,8 +4,8 @@ go 1.19
 
 replace (
 	github.com/tencentcloud/tencentcloud-sdk-go v3.0.82+incompatible => github.com/tencentcloud/tencentcloud-sdk-go v1.0.191
-	k8s.io/api => k8s.io/api v0.28.4
-	k8s.io/apimachinery => k8s.io/apimachinery v0.28.4
+	k8s.io/api => k8s.io/api v0.29.0
+	k8s.io/apimachinery => k8s.io/apimachinery v0.29.0
 	k8s.io/client-go/v11 => k8s.io/client-go v11.0.0+incompatible
 )
 
@@ -193,8 +193,8 @@ dependabot/docker/build/alpine-3.15.0
 	helm.sh/helm/v3 v3.13.3
 	honnef.co/go/tools v0.2.2 // indirect
 dependabot/docker/build/alpine-3.15.0
-	k8s.io/api v0.28.4
-	k8s.io/apimachinery v0.28.4
+	k8s.io/api v0.29.0
+	k8s.io/apimachinery v0.29.0
 	k8s.io/client-go/v11/v12 v12.0.0
 renovate/sigs.k8s.io-kustomize-api-0.x
 	modernc.org/sqlite v1.27.0
