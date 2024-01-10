@@ -24,40 +24,40 @@ renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 	github.com/aws/aws-sdk-go v1.49.14
-	github.com/aws/aws-sdk-go-v2/config v1.26.2
+	github.com/aws/aws-sdk-go-v2/config v1.26.3
 =======
 	github.com/aws/aws-sdk-go v1.49.14
-	github.com/aws/aws-sdk-go-v2/config v1.26.2
+	github.com/aws/aws-sdk-go-v2/config v1.26.3
 =======
 	github.com/aws/aws-sdk-go v1.49.14
-	github.com/aws/aws-sdk-go-v2/config v1.26.2
+	github.com/aws/aws-sdk-go-v2/config v1.26.3
 =======
 	github.com/aws/aws-sdk-go v1.49.14
-	github.com/aws/aws-sdk-go-v2/config v1.26.2
+	github.com/aws/aws-sdk-go-v2/config v1.26.3
 =======
 	github.com/aws/aws-sdk-go v1.49.14
-	github.com/aws/aws-sdk-go-v2/config v1.26.2
+	github.com/aws/aws-sdk-go-v2/config v1.26.3
 =======
 	github.com/aws/aws-sdk-go v1.49.14
-	github.com/aws/aws-sdk-go-v2/config v1.26.2
+	github.com/aws/aws-sdk-go-v2/config v1.26.3
 =======
 	github.com/aws/aws-sdk-go v1.49.14
-	github.com/aws/aws-sdk-go-v2/config v1.26.2
+	github.com/aws/aws-sdk-go-v2/config v1.26.3
 =======
 	github.com/aws/aws-sdk-go v1.49.14
-	github.com/aws/aws-sdk-go-v2/config v1.26.2
+	github.com/aws/aws-sdk-go-v2/config v1.26.3
 dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
 renovate/github.com-aws-aws-sdk-go-v2-feature-s3-manager-1.x
-	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.15.9
+	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.15.11
 =======
 dependabot/docker/build/alpine-3.15.0
-	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.15.9
+	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.15.11
 renovate/github.com-aws-aws-sdk-go-v2-service-s3-1.x
-	github.com/aws/aws-sdk-go-v2/service/s3 v1.47.7
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.48.0
 =======
 dependabot/docker/build/alpine-3.15.0
-	github.com/aws/aws-sdk-go-v2/service/s3 v1.47.7
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.48.0
 renovate/github.com-aws-smithy-go-1.x
 	github.com/aws/smithy-go v1.19.0
 =======
