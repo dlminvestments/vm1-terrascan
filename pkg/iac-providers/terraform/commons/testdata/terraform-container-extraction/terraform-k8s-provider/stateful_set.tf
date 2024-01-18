@@ -83,7 +83,7 @@ resource "kubernetes_stateful_set" "prometheus" {
 
         container {
           name              = "prometheus-server"
-          image             = "prom/prometheus:v2.48.1"
+          image             = "prom/prometheus:v2.49.1"
           image_pull_policy = "IfNotPresent"
 
           args = [
