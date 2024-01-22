@@ -147,7 +147,7 @@ dependabot/docker/build/alpine-3.15.0
 	google.golang.org/genproto 57ef72a4c106
 	gopkg.in/src-d/go-git.v4 v4.13.1
 	gopkg.in/yaml.v3 v3.0.1
-	helm.sh/helm/v3 v3.13.3
+	helm.sh/helm/v3 v3.14.0
 =======
 renovate/go.uber.org-zap-1.x
 	github.com/zclconf/go-cty v1.14.1
@@ -190,7 +190,7 @@ dependabot/docker/build/alpine-3.15.0
 	google.golang.org/grpc v1.31.1 // indirect
 	gopkg.in/src-d/go-git.v4 v4.13.1
 	gopkg.in/yaml.v3 v3.0.1
-	helm.sh/helm/v3 v3.13.3
+	helm.sh/helm/v3 v3.14.0
 	honnef.co/go/tools v0.2.2 // indirect
 dependabot/docker/build/alpine-3.15.0
 	k8s.io/api v0.29.1
