@@ -61,17 +61,17 @@ resource "kubernetes_deployment" "example" {
 
       spec {
         container {
-          image = "nginx:1.25.3"
+          image = "nginx:1.25.4"
           name  = "example1"
         }
 
         container {
-          image = "nginx:1.25.3"
+          image = "nginx:1.25.4"
           name  = "example2"
         }
 
         container {
-          image = "nginx:1.25.3"
+          image = "nginx:1.25.4"
           name  = "example3"
         }
 
