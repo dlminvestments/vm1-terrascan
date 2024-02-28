@@ -143,7 +143,7 @@ renovate/go.uber.org-zap-1.x
 dependabot/docker/build/alpine-3.15.0
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
 	golang.org/x/sys 039c03cc5b86
-	google.golang.org/api v0.165.0
+	google.golang.org/api v0.167.0
 	google.golang.org/genproto 57ef72a4c106
 	gopkg.in/src-d/go-git.v4 v4.13.1
 	gopkg.in/yaml.v3 v3.0.1
@@ -185,7 +185,7 @@ dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
-	google.golang.org/api v0.165.0
+	google.golang.org/api v0.167.0
 	google.golang.org/genproto 57ef72a4c106
 	google.golang.org/grpc v1.31.1 // indirect
 	gopkg.in/src-d/go-git.v4 v4.13.1
