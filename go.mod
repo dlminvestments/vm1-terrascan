@@ -24,40 +24,40 @@ renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 	github.com/aws/aws-sdk-go v1.50.30
-	github.com/aws/aws-sdk-go-v2/config v1.27.4
+	github.com/aws/aws-sdk-go-v2/config v1.27.7
 =======
 	github.com/aws/aws-sdk-go v1.50.30
-	github.com/aws/aws-sdk-go-v2/config v1.27.4
+	github.com/aws/aws-sdk-go-v2/config v1.27.7
 =======
 	github.com/aws/aws-sdk-go v1.50.30
-	github.com/aws/aws-sdk-go-v2/config v1.27.4
+	github.com/aws/aws-sdk-go-v2/config v1.27.7
 =======
 	github.com/aws/aws-sdk-go v1.50.30
-	github.com/aws/aws-sdk-go-v2/config v1.27.4
+	github.com/aws/aws-sdk-go-v2/config v1.27.7
 =======
 	github.com/aws/aws-sdk-go v1.50.30
-	github.com/aws/aws-sdk-go-v2/config v1.27.4
+	github.com/aws/aws-sdk-go-v2/config v1.27.7
 =======
 	github.com/aws/aws-sdk-go v1.50.30
-	github.com/aws/aws-sdk-go-v2/config v1.27.4
+	github.com/aws/aws-sdk-go-v2/config v1.27.7
 =======
 	github.com/aws/aws-sdk-go v1.50.30
-	github.com/aws/aws-sdk-go-v2/config v1.27.4
+	github.com/aws/aws-sdk-go-v2/config v1.27.7
 =======
 	github.com/aws/aws-sdk-go v1.50.30
-	github.com/aws/aws-sdk-go-v2/config v1.27.4
+	github.com/aws/aws-sdk-go-v2/config v1.27.7
 dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
 renovate/github.com-aws-aws-sdk-go-v2-feature-s3-manager-1.x
-	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.16.6
+	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.16.9
 =======
 dependabot/docker/build/alpine-3.15.0
-	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.16.6
+	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.16.9
 renovate/github.com-aws-aws-sdk-go-v2-service-s3-1.x
-	github.com/aws/aws-sdk-go-v2/service/s3 v1.51.1
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.51.4
 =======
 dependabot/docker/build/alpine-3.15.0
-	github.com/aws/aws-sdk-go-v2/service/s3 v1.51.1
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.51.4
 renovate/github.com-aws-smithy-go-1.x
 	github.com/aws/smithy-go v1.20.1
 =======
