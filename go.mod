@@ -123,7 +123,7 @@ renovate/github.com-owenrumney-go-sarif-1.x
 dependabot/docker/build/alpine-3.15.0
 	github.com/owenrumney/go-sarif/v2 v2.3.0
 dependabot/docker/build/alpine-3.15.0
-	github.com/pelletier/go-toml/v2 v2.1.1
+	github.com/pelletier/go-toml/v2 v2.2.0
 	github.com/pkg/errors v0.9.1
 renovate/github.com-spf13-cobra-1.x
 	github.com/spf13/afero v1.11.0
