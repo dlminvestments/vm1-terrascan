@@ -24,40 +24,40 @@ renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 renovate/github.com-aws-aws-sdk-go-v2-config-1.x
 	github.com/aws/aws-sdk-go v1.51.11
-	github.com/aws/aws-sdk-go-v2/config v1.27.9
+	github.com/aws/aws-sdk-go-v2/config v1.27.10
 =======
 	github.com/aws/aws-sdk-go v1.51.11
-	github.com/aws/aws-sdk-go-v2/config v1.27.9
+	github.com/aws/aws-sdk-go-v2/config v1.27.10
 =======
 	github.com/aws/aws-sdk-go v1.51.11
-	github.com/aws/aws-sdk-go-v2/config v1.27.9
+	github.com/aws/aws-sdk-go-v2/config v1.27.10
 =======
 	github.com/aws/aws-sdk-go v1.51.11
-	github.com/aws/aws-sdk-go-v2/config v1.27.9
+	github.com/aws/aws-sdk-go-v2/config v1.27.10
 =======
 	github.com/aws/aws-sdk-go v1.51.11
-	github.com/aws/aws-sdk-go-v2/config v1.27.9
+	github.com/aws/aws-sdk-go-v2/config v1.27.10
 =======
 	github.com/aws/aws-sdk-go v1.51.11
-	github.com/aws/aws-sdk-go-v2/config v1.27.9
+	github.com/aws/aws-sdk-go-v2/config v1.27.10
 =======
 	github.com/aws/aws-sdk-go v1.51.11
-	github.com/aws/aws-sdk-go-v2/config v1.27.9
+	github.com/aws/aws-sdk-go-v2/config v1.27.10
 =======
 	github.com/aws/aws-sdk-go v1.51.11
-	github.com/aws/aws-sdk-go-v2/config v1.27.9
+	github.com/aws/aws-sdk-go-v2/config v1.27.10
 dependabot/docker/build/alpine-3.15.0
 dependabot/docker/build/alpine-3.15.0
 renovate/github.com-aws-aws-sdk-go-v2-feature-s3-manager-1.x
-	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.16.13
+	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.16.14
 =======
 dependabot/docker/build/alpine-3.15.0
-	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.16.13
+	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.16.14
 renovate/github.com-aws-aws-sdk-go-v2-service-s3-1.x
-	github.com/aws/aws-sdk-go-v2/service/s3 v1.53.0
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.53.1
 =======
 dependabot/docker/build/alpine-3.15.0
-	github.com/aws/aws-sdk-go-v2/service/s3 v1.53.0
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.53.1
 renovate/github.com-aws-smithy-go-1.x
 	github.com/aws/smithy-go v1.20.1
 =======
