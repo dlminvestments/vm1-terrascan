@@ -87,12 +87,12 @@ renovate/github.com-hashicorp-go-version-1.x
 	github.com/hashicorp/go-retryablehttp v0.7.5
 	github.com/hashicorp/go-version v1.6.0
 dependabot/docker/build/alpine-3.15.0
-	github.com/hashicorp/hcl/v2 v2.20.0
+	github.com/hashicorp/hcl/v2 v2.20.1
 renovate/github.com-hashicorp-terraform-1.x
-	github.com/hashicorp/hcl/v2 v2.20.0
+	github.com/hashicorp/hcl/v2 v2.20.1
 	github.com/hashicorp/terraform v1.7.5
 =======
-	github.com/hashicorp/hcl/v2 v2.20.0
+	github.com/hashicorp/hcl/v2 v2.20.1
 	github.com/hashicorp/terraform v1.7.5
 dependabot/docker/build/alpine-3.15.0
 	github.com/hashicorp/terraform-svchost eb1d73b78fd9
