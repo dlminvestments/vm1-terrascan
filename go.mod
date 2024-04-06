@@ -64,7 +64,7 @@ renovate/github.com-aws-smithy-go-1.x
 dependabot/docker/build/alpine-3.15.0
 	github.com/aws/smithy-go v1.20.2
 dependabot/docker/build/alpine-3.15.0
-	github.com/awslabs/goformation/v7 v7.14.4
+	github.com/awslabs/goformation/v7 v7.14.5
 	github.com/docker/cli v20.10.5+incompatible // indirect
 	github.com/ghodss/yaml v1.0.0
 	github.com/go-errors/errors v1.5.1
