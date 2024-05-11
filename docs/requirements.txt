@@ -1,4 +1,4 @@
-mkdocs==1.5.3
+mkdocs==1.6.0
 pyup-update-mkdocs-material-8.0.5-to-8.1.1
 mkdocs-material==9.5.18
 =======
