@@ -203,9 +203,9 @@ renovate/sigs.k8s.io-kustomize-api-0.x
 	modernc.org/sqlite v1.29.10
 	sigs.k8s.io/kustomize/api v0.17.1
 renovate/sigs.k8s.io-kustomize-kyaml-0.x
-	sigs.k8s.io/kustomize/kyaml v0.17.0
+	sigs.k8s.io/kustomize/kyaml v0.17.1
 =======
 dependabot/docker/build/alpine-3.15.0
-	sigs.k8s.io/kustomize/kyaml v0.17.0
+	sigs.k8s.io/kustomize/kyaml v0.17.1
 dependabot/docker/build/alpine-3.15.0
 )
