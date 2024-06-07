@@ -82,10 +82,10 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/hashicorp/go-multierror v1.1.1
 renovate/github.com-hashicorp-go-version-1.x
 	github.com/hashicorp/go-retryablehttp v0.7.6
-	github.com/hashicorp/go-version v1.6.0
+	github.com/hashicorp/go-version v1.7.0
 =======
 	github.com/hashicorp/go-retryablehttp v0.7.6
-	github.com/hashicorp/go-version v1.6.0
+	github.com/hashicorp/go-version v1.7.0
 dependabot/docker/build/alpine-3.15.0
 	github.com/hashicorp/hcl/v2 v2.20.1
 renovate/github.com-hashicorp-terraform-1.x
