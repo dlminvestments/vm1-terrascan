@@ -102,10 +102,10 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/mattn/go-isatty v0.0.20
 	github.com/mitchellh/go-homedir v1.1.0
 renovate/github.com-onsi-ginkgo-1.x
-	github.com/moby/buildkit v0.14.1
+	github.com/moby/buildkit v0.15.0
 	github.com/onsi/ginkgo/v2 v2.19.0
 =======
-	github.com/moby/buildkit v0.14.1
+	github.com/moby/buildkit v0.15.0
 	github.com/onsi/ginkgo/v2 v2.19.0
 renovate/github.com-onsi-gomega-1.x
 	github.com/onsi/gomega v1.33.1
