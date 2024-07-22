@@ -197,10 +197,10 @@ dependabot/docker/build/alpine-3.15.0
 	k8s.io/apimachinery v0.30.2
 	k8s.io/client-go/v11/v12 v12.0.0
 renovate/sigs.k8s.io-kustomize-api-0.x
-	modernc.org/sqlite v1.30.1
+	modernc.org/sqlite v1.31.1
 	sigs.k8s.io/kustomize/api v0.17.2
 =======
-	modernc.org/sqlite v1.30.1
+	modernc.org/sqlite v1.31.1
 	sigs.k8s.io/kustomize/api v0.17.2
 renovate/sigs.k8s.io-kustomize-kyaml-0.x
 	sigs.k8s.io/kustomize/kyaml v0.17.1
