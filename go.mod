@@ -90,10 +90,10 @@ dependabot/docker/build/alpine-3.15.0
 	github.com/hashicorp/hcl/v2 v2.21.0
 renovate/github.com-hashicorp-terraform-1.x
 	github.com/hashicorp/hcl/v2 v2.21.0
-	github.com/hashicorp/terraform v1.9.2
+	github.com/hashicorp/terraform v1.9.5
 =======
 	github.com/hashicorp/hcl/v2 v2.21.0
-	github.com/hashicorp/terraform v1.9.2
+	github.com/hashicorp/terraform v1.9.5
 dependabot/docker/build/alpine-3.15.0
 	github.com/hashicorp/terraform-svchost eb1d73b78fd9
 	github.com/iancoleman/strcase v0.3.0
