@@ -20,7 +20,7 @@ RUN CGO_ENABLED=${CGO_ENABLED_VAL} GOOS=${GOOS_VAL} GOARCH=${GOARCH_VAL} go buil
 
 
 # -------- prod stage -------- #
-FROM alpine:3.20.1
+FROM alpine:3.20.3
 
 # create non root user
 RUN addgroup --gid 101 terrascan && \
