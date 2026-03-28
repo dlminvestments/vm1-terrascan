@@ -5,4 +5,4 @@ mkdocs-material==9.5.30
 mkdocs-material==9.5.30
 dependabot/docker/build/alpine-3.15.0
 mkdocs-diagrams==1.0.0
-mkdocs-redirects==1.2.1
+mkdocs-redirects==1.2.3
